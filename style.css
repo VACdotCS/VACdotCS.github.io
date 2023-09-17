@@ -47,3 +47,31 @@
   margin-top: 1%;
   width: 100%;
 }
+
+.navmenu {
+  display: block;
+  background-color: aqua;
+  margin-top: 1%;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.navbar div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.navmenu div:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
+
+.navmenu div h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 30px;
+  text-align: center;
+  padding-top: 5%;
+}
