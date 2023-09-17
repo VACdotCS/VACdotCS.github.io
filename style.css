@@ -37,6 +37,9 @@
 }
 
 .footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   background-color: aqua;
   display: flex;
   flex-flow: row nowrap;
@@ -73,5 +76,5 @@
   margin-bottom: 0;
   height: 30px;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 3%;
 }
