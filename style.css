@@ -7,18 +7,43 @@
   justify-content: center;
   min-height: 7vh;
   margin: 0 5% 0 5%;
+  border-radius: 20px;
 }
 
 .logo {
-  border-radius: 50px;
+  border-radius: 20px;
   border: solid purple;
   position: absolute;
   left: 0;
-  margin-left: 7%;
-  min-height: 5vh;
-  text-align: center;
+  width: fit-content;
+  padding: 8px 8px 8px 8px;
+  margin-left: 6%;
+  min-height: 3vh;
+}
+
+.logo span {
+  color: green;
+  user-select: none;
 }
 
 .head a {
   margin-left: 2%;
+}
+
+.head h1 {
+  position: absolute;
+  left: 0;
+  margin-left: 11%;
+}
+
+.footer {
+  background-color: aqua;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  min-height: 7vh;
+  margin-top: 1%;
+  width: 100%;
 }
