@@ -51,6 +51,10 @@
   width: 100%;
 }
 
+.table tr:nth-child(even) {
+  background-color: aquamarine;
+}
+
 .navmenu {
   display: block;
   background-color: aqua;

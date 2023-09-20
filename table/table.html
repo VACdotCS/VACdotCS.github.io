@@ -5,6 +5,10 @@
     border-collapse: collapse;
   }
 
+  table tr:nth-child(even) {
+  background-color: aquamarine;
+  }
+
   td {
     border: solid red;
     text-align: center;
@@ -28,31 +32,33 @@
 
 </style>
 <body>
-  <table>
-    <tr>
-      <td id="a">ФИО</td>
-      <td id="b">Цвет</td>
-      <td id="c">Баллы</td>
-      <td id="d">Группа</td>
-    </tr>
-    <tr>
-      <td>ФууБарыч С. В.</td>
-      <td>Синий</td>
-      <td>300</td>
-      <td>666</td>
-    </tr>
-    <tr>
-      <td>Алингъевич О. Г.</td>
-      <td>Чёрный</td>
-      <td>320</td>
-      <td>1337</td>
-    </tr>
-    <tr>
-      <td>Джастифай К. Ц.</td>
-      <td>Зелёный</td>
-      <td>350</td>
-      <td>8</td>
-    </tr>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td id="a" colspan="2">ФИО</td>
+        <td id="b">Цвет</td>
+        <td id="c">Баллы</td>
+        <td id="d">Группа</td>
+      </tr>
+      <tr>
+        <td colspan="2">ФууБарыч С. В.</td>
+        <td>Синий</td>
+        <td>300</td>
+        <td>666</td>
+      </tr>
+      <tr>
+        <td colspan="2">Алингъевич О. Г.</td>
+        <td>Чёрный</td>
+        <td>320</td>
+        <td>1337</td>
+      </tr>
+      <tr>
+        <td colspan="2">Джастифай К. Ц.</td>
+        <td>Зелёный</td>
+        <td>350</td>
+        <td>8</td>
+      </tr>
+    </tbody>
   </table>
   <a href="../">На главную страницу</a>
 </body>
