@@ -5,10 +5,10 @@
     <main>
       <div>
         <form style="display: flex; flex-flow: column nowrap; padding-left: 40%; padding-right: 40%;">
-          <input type="text" name="name" placeholder="ФИО"></input>
-          <input type="tel" name="telephone" placeholder="Телефон"></input>
-          <input type="email" name="email" placeholder="Email"></input>
-          <input type="date" name="date" placeholder="Дата Рождения"></input>
+          <input required type="text" name="name" placeholder="ФИО"></input>
+          <input required type="tel" name="telephone" placeholder="Телефон"></input>
+          <input required type="email" name="email" placeholder="Email"></input>
+          <input required type="date" name="date" placeholder="Дата Рождения"></input>
           <p>Ваш пол</p>
           <p>
             <input type="radio" name="answer" value="a1">мужской<Br>
@@ -35,7 +35,7 @@
           </textarea>
 
           <p>
-            <input type="checkbox" name="agreement">с контрактом ознакомлен (а)<Br>
+            <input required type="checkbox" name="agreement">с контрактом ознакомлен (а)<Br>
           </p>
 
           <button name="submit">Сохранить</button>
