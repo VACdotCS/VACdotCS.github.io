@@ -1,45 +1,104 @@
-.head {
+.header {
   background-color: aqua;
+  border-radius: 20px;
+  margin: 0 0 0 0;
+  display: flex;
+  flex-flow: column nowrap;
+  
+}
+
+.header .logo {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  text-align: center;
-  justify-content: center;
-  min-height: 7vh;
-  margin: 0 5% 0 5%;
-  border-radius: 20px;
+  flex: 1;
+  order: 1;
 }
 
 .logo {
-  border-radius: 20px;
-  border: solid purple;
-  position: absolute;
-  left: 0;
-  width: fit-content;
-  padding: 8px 8px 8px 8px;
-  margin-left: 6%;
-  min-height: 3vh;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .logo span {
+  border-radius: 20px;
+  border: solid purple;
+  font-size: 5rem;
+  margin-right: 4%;
+}
+
+.logo h1 {
+  min-width: 10%;
+  font-size: 4rem;
+}
+
+.header .navbar {
+  flex: 2;
+  order: 2;
+  background-color: cadetblue;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.links li {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+.content_wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: bisque;
+  margin-top: 13%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  padding-bottom: 2%;
+}
+
+table {
+  border: solid red;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+table tr:nth-child(even) {
+background-color: aquamarine;
+}
+
+td {
+  border: solid red;
+  text-align: center;
+}
+
+#a {
   color: green;
-  user-select: none;
 }
 
-.head a {
-  margin-left: 2%;
+#b {
+  color: orange;
 }
 
-.head h1 {
-  position: absolute;
-  left: 0;
-  margin-left: 11%;
+#c {
+  color: blue;
+}
+
+#d {
+  color: purple;
+}
+
+#form {
+  scale: 100%;
 }
 
 .footer {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 1;
   background-color: aqua;
   display: flex;
   flex-flow: row nowrap;
@@ -51,43 +110,51 @@
   width: 100%;
 }
 
-.table tr:nth-child(even) {
-  background-color: aquamarine;
-}
+@media screen and (min-width: 1000px) {
+  .header {
+    flex-flow: row nowrap;
+    margin-left: 15%;
+    margin-right: 15%;
+    align-items: center;
+  }
 
-.navmenu {
-  display: block;
-  background-color: aqua;
-  margin-top: 1%;
-  margin-left: 35%;
-  margin-right: 35%;
-}
+  .links {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 
-.navbar div {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
+  .header .navbar {
+    flex: 2;
+    order: 2;
+    background-color: aqua;
+    padding-left: 1%;
+    padding-right: 7%;
+    border-radius: 20px;
+    position: relative;
+  }
 
-.navmenu div:hover {
-  background-color: aquamarine;
-  cursor: pointer;
-  transform: scale(101%);
-  transition: 0.2s ease-in-out;
-}
+  .content_wrapper {
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 
-.navmenu div h4 {
-  margin-top: 0;
-  margin-bottom: 0;
-  height: 30px;
-  text-align: center;
-  padding-top: 3%;
-}
+  .logo {
+    margin-top: 0;
+    margin-left: 1%;
+  }
 
-.navmenu div h4 a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
+  .logo span {
+    font-size: 3rem;
+  }
+
+  .logo h1 {
+    font-size: 3rem;
+    min-width: fit-content;
+  }
+
+  .links li {
+    margin-left: 4%;
+    font-size: 18px;
+  }
 }

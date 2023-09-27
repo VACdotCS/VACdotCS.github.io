@@ -6,40 +6,175 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header class="head">
-        <div class="logo">
-          <span>Logo</span>
-        </div>
-        <h1>TVsite</h1>
-        <a href="">Ссылка 1</a>
-        <a href="">Ссылка 2</a>
-        <a href="">Ссылка 3</a>
-        <a href="">Ссылка 4</a>
-    </header>
-    <nav class="navmenu">
-      <div>
-        <h4>
-          <a href="./hyperlinks/links.html">
-            Список гиперссылок
-          </a>
-        </h4>
+    <header class="header">
+      <div class="logo">
+        <span>Logo</span>
+        <h1>Some Site</h1>
       </div>
+      <nav class="navbar">
+        <ul class="links">
+          <li><a href="">Ссылка 1</a></li>
+          <li><a href="">Ссылка 2</a></li>
+          <li><a href="">Ссылка 3</a></li>
+          <li><a href="">Ссылка 4</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    
+    <div class="content_wrapper">
+      <h1>Таблица</h1>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td id="a" colspan="2">ФИО</td>
+            <td id="b">Цвет</td>
+            <td id="c">Баллы</td>
+            <td id="d">Группа</td>
+          </tr>
+          <tr>
+            <td colspan="2">ФууБарыч С. В.</td>
+            <td>Синий</td>
+            <td>300</td>
+            <td>666</td>
+          </tr>
+          <tr>
+            <td colspan="2">Алингъевич О. Г.</td>
+            <td>Чёрный</td>
+            <td>320</td>
+            <td>1337</td>
+          </tr>
+          <tr>
+            <td colspan="2">Джастифай К. Ц.</td>
+            <td>Зелёный</td>
+            <td>350</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td rowspan="2" colspan="2" scope="rowgroup">Тест</td>
+            <td>Something</td>
+            <td>1234</td>
+            <td>456</td>
+          </tr>
+          <tr>
+            <td>ASd</td>
+            <td>465</td>
+            <td>4654</td>
+          </tr>
+          <tr>
+            <td colspan="2">Тест1</td>
+            <td>1234</td>
+            <td rowspan="2">456</td>
+            <td rowspan="2">456</td>
+          </tr>
+          <tr>
+            <td colspan="2">Тест2</td>
+            <td>1234</td>
+          </tr>
+          
+        </tbody>
+      </table>
       <div>
-        <h4>
-          <a href="table/table.html">
-            Таблица
+        <main style="display: flex; flex-flow: column nowrap; justify-content: center;">
+          <h1 style="margin-left: 25%;">Гиперссылки</h1>
+          <p>
+            Переходите на сайт нашего университета <a href="https://www.kubsu.ru/index.php">КУБГУ</a>
+          </p>
+          <a href="#span">Ссылка на фрагмент страницы</a>
+          <a href="https://lavnik.net/kak-sozdat-ssylku-na-konkretnuyu-chast-stranitsy#sidebar">Ссылка на фрагмент страницы стороннего сайта</a>
+          <a href="https://www.kubsu.ru/index.php">Кубанский Государственный Универститет</a>
+          <a href="http://www.kubsu.ru/index.php">Кубанский Государственный Универститет (noHTTPS)</a>
+          <a href="https://www.google.com">
+            <img src="image.jpg" alt="" style="width: 400px;">
           </a>
-        </h4>
-      </div>  
-      <div>
-        <h4>
-          <a href="./form/index.html">
-            Форма
-          </a>
-        </h4>
-      </div>    
-    </nav>
-      
+          
+          <img src="image.jpg" alt="" style="width: 400px; margin-top: 4%;">
+            <div style="border: solid red; border-radius: 100px; position: absolute; width: 50px; height: 30px; margin-bottom: 60px;">
+              <a href="https://www.kubsu.ru/index.php" style="display: block; width: 50px; height: 30px; border-radius: 100px;"></a>
+            </div>
+          
+          <h1>Через тег map</h1>
+          <map name="link">
+            <area 
+            shape="rect" 
+            coords="25,25,200,200" 
+            href="https://www.kubsu.ru/index.php" 
+            alt=""
+            >
+            <area
+            shape="circle" 
+            coords="350,200,100" 
+            href="https://www.github.com" 
+            alt=""
+            />
+          </map>
+          <img usemap="#link" style="width: 400px;" src="image.jpg" alt="">
+          <a href="../about/second/index.html">Ссылка на два каталога ниже</a>
+          <a href="../1/index.html">Сокращённная внутренняя ссылка</a>
+          <span id="span">Фрагмент страницы</span>
+          <a href="?id=1&flex=no&debug=off">Ссылка с параметрами</a>
+          <a href="?id=2">Ссылка с параметром id</a>
+          <a href="./page.html">Ссылка на страницу в текущем каталоге</a>
+          <a href="../about/index.html" style="font-size: 4rem; color: red">About</a>
+          <a href="">Ссылка с пустым href</a>
+          <a style="color: burlywood;">Ссылка без href</a>
+          <a href="https://www.vk.com" rel="nofollow"><!--noindex-->Ссылка без индексации<!--/noindex--></a>
+          <a href="https://www.vk.com" rel="nofollow">Запрещено переходить поисковикам</a>
+          
+          <ol>
+            <li>
+              <a href="https://dzen.ru" title="wow1">Дзен</a>
+            </li>
+            <li>
+              <a href="https://mail.ru" title="wow2">Mail.ru</a>
+            </li>
+            <li>
+              <a href="https://www.sberbank.com/promo/kandinsky/" title="wow3">Kandinsky 2.2</a>
+            </li>
+          </ol>
+          <a href="ftp://admin:admin@192.168.0.144:11111/somefile.txt">FTP ссылка</a>
+          </main>
+      </div>
+      <h1>Форма</h1>
+        <form id="form" style="display: flex; flex-flow: column nowrap;">
+          <input required type="text" name="name" placeholder="ФИО"></input>
+          <input required type="number" name="telephone" placeholder="Телефон"></input>
+          <input required type="email" name="email" placeholder="Email"></input>
+          <input required type="date" name="date" placeholder="Дата Рождения"></input>
+          <p>Ваш пол</p>
+          <p>
+            <input required type="radio" name="answer" value="a1">мужской<Br>
+            <input required type="radio" name="answer" value="a2">женский<Br>
+          </p>
+          <p>Любимый язык программирования</p>
+          <select name="programming_lang">
+            <option value="value1">Pascal</option>
+            <option value="value2">C</option>
+            <option value="value3">C++</option>
+            <option value="value4">JavaScript</option>
+            <option value="value5">PHP</option>
+            <option value="value6">Python</option>
+            <option value="value7">Java</option>
+            <option value="value8">Haskel</option>
+            <option value="value9">Clojure</option>
+            <option value="value10">Prolog</option>
+            <option value="value11">Scala</option>  
+          </select>
+          <p>Биография</p>
+          
+          <textarea name="biography">
+            
+          </textarea>
+  
+          <p>
+            <input required type="checkbox" name="agreement">с контрактом ознакомлен (а)<Br>
+          </p>
+  
+          <button name="submit">Сохранить</button>
+        </form>
+        
+    </div>
+
     <footer class="footer">
       <span>
         (С) Табуркин Владимир Сергеевич
