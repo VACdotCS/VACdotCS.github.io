@@ -58,12 +58,6 @@
   padding-bottom: 2%;
 }
 
-table {
-  border: solid red;
-  width: 50%;
-  border-collapse: collapse;
-}
-
 table tr:nth-child(even) {
 background-color: aquamarine;
 }
@@ -89,10 +83,6 @@ td {
   color: purple;
 }
 
-#form {
-  scale: 100%;
-}
-
 .footer {
   position: absolute;
   left: 0;
@@ -108,6 +98,19 @@ td {
   width: 100%;
 }
 
+.table {
+  border: solid red;
+  width: 50%;
+  border-collapse: collapse;
+}
+.hyper {
+  display: flex; flex-flow: column nowrap; justify-content: center; order: 2;
+}
+
+.form {
+  display: flex; flex-flow: column nowrap; order: 3;
+}
+
 @media screen and (min-width: 1080px) {
   .header {
     flex-flow: row nowrap;
@@ -119,6 +122,19 @@ td {
   .links {
     display: flex;
     flex-flow: row nowrap;
+  }
+
+  .form {
+    order: 1;
+  }
+
+  .hyper {
+    order: 2;
+  }
+
+  .table {
+    order: 3;
+    margin-top: 2%;
   }
 
   .header .navbar {
