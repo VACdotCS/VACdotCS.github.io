@@ -110,7 +110,7 @@ td {
   width: 100%;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1080px) {
   .header {
     flex-flow: row nowrap;
     margin-left: 15%;
@@ -126,7 +126,7 @@ td {
   .header .navbar {
     flex: 2;
     order: 2;
-    background-color: aqua;
+    background-color: transparent;
     padding-left: 1%;
     padding-right: 7%;
     border-radius: 20px;
