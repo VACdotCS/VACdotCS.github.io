@@ -1,3 +1,7 @@
+function containsOnlyNumbers(str) {
+  return /^-?\d+$/.test(str);
+}
+
 const list_of_products = {
   "Potato" : 100,
   "Tomato" : 220,
@@ -14,11 +18,10 @@ for (var key in list_of_products) {
   opt.value = key;
   opt.innerHTML = key;
   SelectTag.appendChild(opt);
-  console.log("Wow!");
 }
 
 let count_tag = window.document.createElement('input');
-count_tag.type = "number";
+count_tag.type = "text";
 count_tag.step = '1';
 count_tag.min = 0;
 count_tag.value = 0;
@@ -45,7 +48,11 @@ calculator_tag.appendChild(summary_tag);
 window.document.getElementById('btn').addEventListener("click", () => {
   var el = window.document.getElementById("SelectTag");
   var value = el.options[el.selectedIndex].value;
-  console.log(value);
-  summary = list_of_products[value] * window.document.getElementById('input_shop').value;
-  window.document.getElementById('Summary').innerHTML = summary;
+  if (!containsOnlyNumbers(window.document.getElementById('input_shop').value)) {
+    alert("Поле количества должно содержать целое число");
+  } else {
+    summary = list_of_products[value] * window.document.getElementById('input_shop').value;
+    window.document.getElementById('Summary').innerHTML = summary;
+  }
+  
 })
