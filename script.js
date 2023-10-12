@@ -24,9 +24,9 @@ let count_tag = window.document.createElement('input');
 count_tag.type = "text";
 count_tag.step = '1';
 count_tag.min = 0;
-count_tag.value = 0;
 count_tag.id = "input_shop";
-count_tag.classList.add('input-group')
+count_tag.classList.add('form-control')
+count_tag.placeholder = "Count";
 
 let summary;
 
