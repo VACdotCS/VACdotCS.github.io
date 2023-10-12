@@ -48,7 +48,8 @@ calculator_tag.appendChild(summary_tag);
 window.document.getElementById('btn').addEventListener("click", () => {
   var el = window.document.getElementById("SelectTag");
   var value = el.options[el.selectedIndex].value;
-  if (!containsOnlyNumbers(window.document.getElementById('input_shop').value)) {
+  var inp = window.document.getElementById('input_shop').value;
+  if (!containsOnlyNumbers(inp) || inp.includes("-")) {
     alert("Поле количества должно содержать целое положительное число");
   } else {
     summary = list_of_products[value] * window.document.getElementById('input_shop').value;
