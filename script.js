@@ -3,9 +3,9 @@ function containsOnlyNumbers(str) {
 }
 
 const list_of_products = {
-  "Potato" : 100,
-  "Tomato" : 220,
-  "Cucumber" : 80,
+  "T-shirt" : 1000,
+  "Shoes" : 3200,
+  "Boots" : 4000,
 }
 
 let calculator_tag = window.document.getElementById('calculator');
@@ -49,7 +49,7 @@ window.document.getElementById('btn').addEventListener("click", () => {
   var el = window.document.getElementById("SelectTag");
   var value = el.options[el.selectedIndex].value;
   if (!containsOnlyNumbers(window.document.getElementById('input_shop').value)) {
-    alert("Поле количества должно содержать целое число");
+    alert("Поле количества должно содержать целое положительное число");
   } else {
     summary = list_of_products[value] * window.document.getElementById('input_shop').value;
     window.document.getElementById('Summary').innerHTML = summary;
