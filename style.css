@@ -44,9 +44,33 @@
   
 }
 
+#image2 {
+  display: none;
+}
+
+#image3 {
+  display: none;
+}
+
+#image4 {
+  display: none;
+}
+
 @media screen and (min-width: 1080px) {
   #content {
     width: 800px;
+  }
+
+  #image2 {
+    display: block;
+  }
+
+  #image3 {
+    display: block;
+  }
+
+  #image4 {
+    display: block;
   }
   
   #table {
