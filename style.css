@@ -21,6 +21,10 @@
   transition: all 2s ease-in-out;
 }
 
+.gallery img {
+  margin-left: 2px;
+}
+
 #table {
   width: 100px;
   margin-left: 8%;
