@@ -1,65 +1,124 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <title>Hello my dear friend</title>
-  </head>
-  <body>
-    <main style="display: flex; flex-flow: column nowrap; justify-content: center; align-items: center;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vladimir — Fullstack Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <div class="logo">Vladimir.dev</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#skills">Навыки</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="btn primary">Связаться</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div>
+      <h1>Fullstack Developer</h1>
       <p>
-        Переходите на сайт нашего университета <a href="https://www.kubsu.ru/index.php">КУБГУ</a>
+        Создаю современные веб-приложения с чистой архитектурой,
+        удобным UX и масштабируемым backend.
       </p>
-      <a href="./form/index.html">
-        <h1>Форма</h1>
-      </a>
-      <a href="#span">Ссылка на фрагмент страницы</a>
-      <a href="https://lavnik.net/kak-sozdat-ssylku-na-konkretnuyu-chast-stranitsy#sidebar">Ссылка на фрагмент страницы стороннего сайта</a>
-      <a href="https://www.kubsu.ru/index.php">Кубанский Государственный Универститет</a>
-      <a href="http://www.kubsu.ru/index.php">Кубанский Государственный Универститет (noHTTPS)</a>
-      <a href="https://www.google.com">
-        <img src="image.jpg" alt="" style="width: 400px;">
-      </a>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary">Мои проекты</a>
+        <a href="#contact" class="btn secondary">Написать мне</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-content">
+        <h3>Tech Stack</h3>
+        <ul>
+          <li>React / Next.js</li>
+          <li>NestJS / NodeJS</li>
+          <li>PostgreSQL</li>
+          <li>Docker</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <img src="image.jpg" alt="" style="width: 400px;">
-        <div style="border: solid red; border-radius: 100px; position: absolute; width: 50px; height: 30px;">
-          <a href="https://www.kubsu.ru/index.php" style="display: block; width: 50px; height: 30px; border-radius: 100px;"></a>
-        </div>
-      </img>
+<section id="about" class="section">
+  <div class="container">
+    <h2>Обо мне</h2>
+    <p class="section-text">
+      Разрабатываю frontend и backend решения, уделяя внимание архитектуре,
+      производительности и чистоте кода. Опыт создания SaaS-проектов,
+      админ-панелей и API.
+    </p>
+  </div>
+</section>
 
-      <h1>Через тег map</h1>
-      <map name="link">
-        <area 
-        shape="rect" 
-        coords="25,25,275,275" 
-        href="https://www.kubsu.ru/index.php" 
-        alt=""
-        />
-      </map>
-      <img usemap="#link" style="width: 400px;" src="image.jpg" alt="">
-      <a href="./about/second/index.html">Ссылка на два каталога ниже</a>
-      <a href="./1/index.html">Сокращённная внутренняя ссылка</a>
-      <span id="span">Фрагмент страницы</span>
-      <a href="?id=1&flex=no&debug=off">Ссылка с параметрами</a>
-      <a href="?id=2">Ссылка с параметром id</a>
-      <a href="./page.html">Ссылка на страницу в текущем каталоге</a>
-      <a href="./about/index.html" style="font-size: 4rem; color: red">About</a>
-      <a href="">Ссылка с пустым href</a>
-      <a style="color: burlywood;">Ссылка без href</a>
-      <a href="https://www.vk.com" rel="nofollow"><!--noindex-->Ссылка без индексации<!--/noindex--></a>
-      <a href="https://www.vk.com" rel="nofollow">Запрещено переходить поисковикам</a>
+<section id="projects" class="section alt">
+  <div class="container">
+    <h2>Проекты</h2>
+    <div class="projects-grid">
 
-      <ol>
-        <li>
-          <a href="https://dzen.ru" title="wow1">Дзен</a>
-        </li>
-        <li>
-          <a href="https://mail.ru" title="wow2">Mail.ru</a>
-        </li>
-        <li>
-          <a href="https://www.sberbank.com/promo/kandinsky/" title="wow3">Kandinsky 2.2</a>
-        </li>
-      </ol>
-      <a href="ftp://admin:admin@192.168.0.144:11111/somefile.txt">FTP ссылка</a>
-    </main>
-  </body>
+      <div class="project-card">
+        <h3>Botanical Garden API</h3>
+        <p>FastAPI + SQLite + CRUD + HTML формы</p>
+        <a href="#" class="link">Подробнее →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>ML Mushroom Classifier</h3>
+        <p>YOLOv8 + Dataset + Обучение и тестирование</p>
+        <a href="#" class="link">Подробнее →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Trello Clone</h3>
+        <p>Angular + Drag & Drop + UI компоненты</p>
+        <a href="#" class="link">Подробнее →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="container">
+    <h2>Навыки</h2>
+    <div class="skills">
+      <span>JavaScript</span>
+      <span>TypeScript</span>
+      <span>React</span>
+      <span>NextJS</span>
+      <span>NestJS</span>
+      <span>NodeJS</span>
+      <span>Docker</span>
+      <span>PostgreSQL</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section alt">
+  <div class="container contact">
+    <h2>Контакты</h2>
+    <p>Email: youremail@example.com</p>
+    <p>Telegram: @yourusername</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Vladimir. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
 </html>
