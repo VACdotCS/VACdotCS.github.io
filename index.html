@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vladimir — Fullstack Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Vladimir Taburkin — Fullstack Developer</title>
+  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,112 +12,420 @@
 <header class="header">
   <div class="container nav">
     <div class="logo">Vladimir.dev</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">Обо мне</a></li>
-        <li><a href="#projects">Проекты</a></li>
-        <li><a href="#skills">Навыки</a></li>
-        <li><a href="#contact">Контакты</a></li>
-      </ul>
-    </nav>
-    <a href="#contact" class="btn primary">Связаться</a>
+
+    <div class="lang-switch">
+      <button id="enBtn" class="active">EN</button>
+      <button id="ruBtn">RU</button>
+    </div>
   </div>
 </header>
 
-<section class="hero">
-  <div class="container hero-content">
-    <div>
-      <h1>Fullstack Developer</h1>
+<section class="hero container">
+  <div class="photo">
+    <div class="photo-overlay">
+      <span>VT</span>
+    </div>
+  </div>
+
+  <div class="hero-text">
+    <!-- EN -->
+    <div class="lang en active">
+      <h1>Vladimir Taburkin</h1>
+      <h2>Fullstack Developer</h2>
       <p>
-        Создаю современные веб-приложения с чистой архитектурой,
-        удобным UX и масштабируемым backend.
+        Fullstack engineer with commercial experience building scalable systems
+        using TypeScript and cloud infrastructure. Designing REST APIs,
+        distributed report pipelines, queue-based processing, and modern SPA interfaces.
       </p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary">Мои проекты</a>
-        <a href="#contact" class="btn secondary">Написать мне</a>
+
+      <div class="contacts">
+        <p>Github: <a href="https://github.com/VACdotCS" rel="noopener noreferrer" target="_blank"> link </a></p>
+        <p>Email: tvitworker@gmail.com</p>
+        <p>Location: Krasnodar, Russia</p>
+        <p>Citizenship: Russia (work permit in Russia)</p>
+        <p>Ready to relocate and travel</p>
       </div>
     </div>
-    <div class="hero-card">
-      <div class="card-content">
-        <h3>Tech Stack</h3>
-        <ul>
-          <li>React / Next.js</li>
-          <li>NestJS / NodeJS</li>
-          <li>PostgreSQL</li>
-          <li>Docker</li>
-        </ul>
+
+    <!-- RU -->
+    <div class="lang ru">
+      <h1>Табуркин Владимир</h1>
+      <h2>Fullstack-разработчик</h2>
+      <p>
+        Fullstack-разработчик с коммерческим опытом построения масштабируемых систем
+        на TypeScript и облачной инфраструктуре. Проектирование REST API,
+        распределённых пайплайнов обработки отчётов и современных SPA-интерфейсов.
+      </p>
+
+      <div class="contacts">
+        <p>Github: <a href="https://github.com/VACdotCS" rel="noopener noreferrer" target="_blank"> link </a></p>
+        <p>Email: tvitworker@gmail.com</p>
+        <p>Проживает: Краснодар</p>
+        <p>Гражданство: Россия (разрешение на работу в России)</p>
       </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section container">
+
+  <!-- ================= EN ================= -->
+  <div class="lang en active">
+    <h3>Professional Experience</h3>
+
+    <!-- Sirena AI -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="sirena.png" alt="Sirena AI">
+        </div>
+        <div class="job-title">
+          <h4>Fullstack Developer</h4>
+          <p class="company">Sirena AI · Nov 2025 – Present (5 months)</p>
+        </div>
+      </div>
+      <ul>
+        <li>Developing SPA on Angular and deploying to AWS CloudFront.</li>
+        <li>Writing business logic in AWS, mainly on Lambda, deploying via Serverless Framework.</li>
+        <li>Debugging based on user feedback (young startup).</li>
+        <li>Participated in designing report processing queue with BullMQ.</li>
+        <li>Participated in migrating infrastructure to Russian VDS, reducing latency for RF users by 40% and improving overall service stability.</li>
+        <li>Conducted code base refactoring within tasks, improving readability and simplifying further code maintenance.</li>
+        <li>Reworked the entire main report generation pipeline mechanism, improving WB API interaction stability, reducing errors displayed to users almost to zero. This reduced negative reviews (user irritation from system errors).</li>
+      </ul>
+      <p class="note">Part-time self-employment</p>
+    </div>
+
+    <!-- HappyHero -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="hh.png" alt="HappyHero">
+        </div>
+        <div class="job-title">
+          <h4>Fullstack Developer</h4>
+          <p class="company">HappyHero, USA · Jul 2024 – Jun 2025 (1 year)</p>
+        </div>
+      </div>
+      <ul>
+        <li>Designing REST API, data models.</li>
+        <li>Designing DB structure (PostgreSQL), describing entities on TypeORM.</li>
+        <li>Writing endpoints using Nest.js framework according to designed schemas.</li>
+        <li>Supporting and improving Telegram bot mini-app on React (Next.js).</li>
+        <li>Administering Grafana, Prometheus Alerts, writing configs.</li>
+        <li>Prompt engineering, using Azure GPT.</li>
+        <li>Helping write Python service (AI assistant with state machine).</li>
+        <li>Wrote a full monolithic on Nest.js covered with sufficient metrics, from DB structure to endpoints and implementation of authorization protocols for other services within the company, analytical data export service.</li>
+        <li>Separately highlight microservice for sending push notifications via Firebase Cloud Messaging using CRON and considering user time zone (multilingual app).</li>
+      </ul>
+    </div>
+
+    <!-- First Line Outsourcing -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="flo.png" alt="First Line Outsourcing">
+        </div>
+        <div class="job-title">
+          <h4>Software Engineer</h4>
+          <p class="company">First Line Outsourcing, Krasnodar · Apr 2024 – Jun 2025 (1 year 3 months)</p>
+        </div>
+      </div>
+      <p>Backend:</p>
+      <ul>
+        <li>Designing and implementing stable REST APIs on Express.js and NestJS for microservices and core backend functions.</li>
+        <li>Working with SQL (PostgreSQL) and NoSQL (MongoDB) databases — DB schema, queries, indexing, and performance optimization.</li>
+        <li>Backend development for web apps, Telegram mini-apps, and internal tools on modern TypeScript stack.</li>
+        <li>Developing cloud and scalable backend components using AWS services (Lambda, API Gateway, S3) in serverless environment.</li>
+        <li>Integrating backend services with external APIs and internal systems with secure authorization and consistent data flow.</li>
+        <li>Participating in DevOps processes, automating deployment on VDS/VPS and AWS, supporting CI/CD pipelines.</li>
+        <li>Close collaboration with frontend teams (Angular/React) to define API contracts and optimize data transfer for SPA.</li>
+        <li>Debugging, troubleshooting, and optimizing backend services performance.</li>
+      </ul>
+      <p>Frontend:</p>
+      <ul>
+        <li>Developing and supporting SPA apps on Angular and Next.js with thoughtful modular architecture.</li>
+        <li>Designing frontend structure with separation of business logic, service layer, and UI components.</li>
+        <li>Setting up routing, guards, lazy loading, and dynamic routes.</li>
+        <li>Implementing SSR and CSR in Next.js, working with server-side data loading and API routes.</li>
+        <li>Integrating with REST API, implementing JWT authorization and token refresh mechanisms.</li>
+        <li>Building reactive logic using RxJS and service architecture.</li>
+        <li>Developing Telegram mini-apps and internal admin panels.</li>
+        <li>Creating reusable UI components and complex forms with advanced validation.</li>
+        <li>Optimizing client app performance and refactoring legacy code.</li>
+        <li>Preparing production builds, setting up environments, and participating in app deployments.</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- ================= RU ================= -->
+  <div class="lang ru">
+    <h3>Профессиональный опыт</h3>
+
+    <!-- Сирена АИ -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="sirena.png" alt="Сирена АИ">
+        </div>
+        <div class="job-title">
+          <h4>Fullstack-разработчик</h4>
+          <p class="company">Сирена АИ · Ноя 2025 – н.в. (5 месяцев)</p>
+        </div>
+      </div>
+      <ul>
+        <li>Развитие SPA на Angular и деплой в AWS Cloudfront.</li>
+        <li>Написание бизнес-логики в AWS, в основном на Lambda, деплой туда же через Serverless Framework.</li>
+        <li>Дебаггинг по отзывам пользователей (молодой стартап).</li>
+        <li>Участие в проектировании очереди обработки отчётов с BullMQ.</li>
+        <li>Участвовал в миграции инфраструктуры на российские VDS, что привело к снижению задержек для пользователей из РФ на 40% и повысило общую стабильность сервиса.</li>
+        <li>Провел рефакторинг кодовой базы в рамках своих задач, что повысило ее читаемость и упростило дальнейшую поддержку кода.</li>
+        <li>Переработал весь механизм основного пайплайна генерации отчётов, что повысило стабильность взаимодействия с WB API, снизило количество ошибок, которые отображаются пользователям практически до нуля. Это снизило количество плохих отзывов (раздражения у пользователей от ошибок системы).</li>
+      </ul>
+      <p class="note">Работа по самозанятости (Part-time)</p>
+    </div>
+
+    <!-- HappyHero -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="hh.png" alt="HappyHero">
+        </div>
+        <div class="job-title">
+          <h4>Fullstack-разработчик</h4>
+          <p class="company">HappyHero · Июл 2024 – Июн 2025 (1 год)</p>
+        </div>
+      </div>
+      <ul>
+        <li>Проектирование Rest-api, моделей данных.</li>
+        <li>Проектирование структуры БД (PostgreSQL), описание сущностей на Typeorm.</li>
+        <li>Написание эндооинтов с использованием фреймворка Nest.js по спроектированным схемам.</li>
+        <li>Поддержка и улучшение Мини-аппы для бота в телеграмме на React (next.js).</li>
+        <li>Администрирование Grafana, Prometheus Alerts, написание конфигов.</li>
+        <li>Промптинжиниринг, вообще использование Azure GPT.</li>
+        <li>Помощь в написании сервиса на Python (ИИ-помощник со стейт машиной).</li>
+        <li>Мной написан полноценный монолит на Nest.js покрытый достаточным количеством метрик, начиная от структуры БД, до эндпоинтов и реализации протоколов авторизации для других сервисов внутри компании, сервис для экспорта аналитических данных.</li>
+        <li>Отдельно хочется выделить микросервис для отправки пуш-нотификаций через Firebase Cloud Messaging с использованием CRON и учитывающий часовой пояс пользователя (приложение мультиязычное).</li>
+      </ul>
+    </div>
+
+    <!-- First Line Outsourcing -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="flo.png" alt="First Line Outsourcing">
+        </div>
+        <div class="job-title">
+          <h4>Инженер-программист</h4>
+          <p class="company">First Line Outsourcing, Краснодар · Апр 2024 – Июн 2025 (1 год 3 месяца)</p>
+        </div>
+      </div>
+      <p>Backend: </p>
+      <ul>
+        <li>Проектирование и реализация стабильных REST API на Express.js и NestJS для микросервисов и основных backend-функций.</li>
+        <li>Работа с SQL (PostgreSQL) и NoSQL (MongoDB) базами — схема БД, запросы, индексация и оптимизация производительности.</li>
+        <li>Backend-разработка для веб-приложений, Telegram мини-аппов и внутренних инструментов на современном TypeScript-стеке.</li>
+        <li>Разработка облачных и масштабируемых backend-компонентов с использованием сервисов AWS (Lambda, API Gateway, S3) в serverless-окружении.</li>
+        <li>Интеграция backend-сервисов с внешними API и внутренними системами с безопасной авторизацией и консистентным потоком данных.</li>
+        <li>Участие в DevOps-процессах, автоматизация деплоя на VDS/VPS и AWS, поддержка CI/CD пайплайнов.</li>
+        <li>Тесное взаимодействие с frontend-командами (Angular/React) для определения контрактов API и оптимизации передачи данных для SPA.</li>
+        <li>Дебаггинг, устранение неисправностей и оптимизация производительности backend-сервисов.</li>
+      </ul>
+      <p>Frontend: </p>
+      <ul>
+        <li>Разработка и поддержка SPA-приложений на Angular и Next.js с продуманной модульной архитектурой.</li>
+        <li>Проектирование frontend-структуры с разделением бизнес-логики, сервисного слоя и UI-компонентов.</li>
+        <li>Настройка маршрутизации, guard’ов, lazy loading и динамических роутов.</li>
+        <li>Реализация SSR и CSR в Next.js, работа с серверной загрузкой данных и API-routes.</li>
+        <li>Интеграция с REST API, реализация JWT-авторизации и механизмов обновления токенов.</li>
+        <li>Построение реактивной логики с использованием RxJS и сервисной архитектуры.</li>
+        <li>Разработка Telegram мини-апп и внутренних административных панелей.</li>
+        <li>Создание переиспользуемых UI-компонентов и сложных форм с расширенной валидацией.</li>
+        <li>Оптимизация производительности клиентских приложений и рефакторинг legacy-кода.</li>
+        <li>Подготовка production-сборок, настройка окружений и участие в деплое приложений.</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<section class="section container">
+  <!-- EN -->
+  <div class="lang en active">
+    <h3>Education</h3>
+    <div class="education">
+      <h4>Kuban State University, Krasnodar</h4>
+      <p>Faculty of Computer Technologies and Applied Mathematics</p>
+      <p>Applied Mathematics and Informatics (Incomplete higher education, expected 2026)</p>
+    </div>
+  </div>
+
+  <!-- RU -->
+  <div class="lang ru">
+    <h3>Образование</h3>
+    <div class="education">
+      <h4>Кубанский государственный университет, Краснодар</h4>
+      <p>Компьютерных технологий и прикладной математики</p>
+      <p>Прикладная математика и информатика (Неоконченное высшее, 2026)</p>
     </div>
   </div>
 </section>
 
-<section id="about" class="section">
-  <div class="container">
-    <h2>Обо мне</h2>
-    <p class="section-text">
-      Разрабатываю frontend и backend решения, уделяя внимание архитектуре,
-      производительности и чистоте кода. Опыт создания SaaS-проектов,
-      админ-панелей и API.
-    </p>
+<section class="section container">
+  <!-- EN -->
+  <div class="lang en active">
+    <h3>Languages</h3>
+    <ul class="languages">
+      <li>Russian — Native</li>
+      <li>English — B2 (Upper-Intermediate)</li>
+    </ul>
+  </div>
+
+  <!-- RU -->
+  <div class="lang ru">
+    <h3>Знание языков</h3>
+    <ul class="languages">
+      <li>Русский — Родной</li>
+      <li>Английский — B2 — Средне-продвинутый</li>
+    </ul>
   </div>
 </section>
 
-<section id="projects" class="section alt">
-  <div class="container">
-    <h2>Проекты</h2>
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <h3>Botanical Garden API</h3>
-        <p>FastAPI + SQLite + CRUD + HTML формы</p>
-        <a href="#" class="link">Подробнее →</a>
-      </div>
-
-      <div class="project-card">
-        <h3>ML Mushroom Classifier</h3>
-        <p>YOLOv8 + Dataset + Обучение и тестирование</p>
-        <a href="#" class="link">Подробнее →</a>
-      </div>
-
-      <div class="project-card">
-        <h3>Trello Clone</h3>
-        <p>Angular + Drag & Drop + UI компоненты</p>
-        <a href="#" class="link">Подробнее →</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="skills" class="section">
-  <div class="container">
-    <h2>Навыки</h2>
+<section class="section container skills-section">
+  <!-- EN -->
+  <div class="lang en active">
+    <h3>Skills</h3>
     <div class="skills">
+      <span>SQL</span>
       <span>JavaScript</span>
+      <span>Git</span>
+      <span>PostgreSQL</span>
+      <span>Node.js</span>
+      <span>HTML</span>
+      <span>Linux</span>
+      <span>English</span>
       <span>TypeScript</span>
       <span>React</span>
-      <span>NextJS</span>
-      <span>NestJS</span>
-      <span>NodeJS</span>
+      <span>AWS</span>
+      <span>Google Cloud</span>
+      <span>Azure</span>
+      <span>HTML5</span>
+      <span>Python</span>
+      <span>Nest.js</span>
+      <span>Express.js</span>
+      <span>Angular</span>
+      <span>MongoDB</span>
+      <span>Docker Compose</span>
       <span>Docker</span>
+      <span>TypeORM</span>
+      <span>Next.js</span>
+      <span>Redis</span>
+      <span>Valkey</span>
+    </div>
+  </div>
+  <!-- RU -->
+  <div class="lang ru">
+    <h3>Навыки</h3>
+    <div class="skills">
+      <span>SQL</span>
+      <span>JavaScript</span>
+      <span>Git</span>
       <span>PostgreSQL</span>
+      <span>Node.js</span>
+      <span>HTML</span>
+      <span>Linux</span>
+      <span>English</span>
+      <span>TypeScript</span>
+      <span>React</span>
+      <span>AWS</span>
+      <span>Google Cloud</span>
+      <span>Azure</span>
+      <span>HTML5</span>
+      <span>Python</span>
+      <span>Nest.js</span>
+      <span>Express.js</span>
+      <span>Angular</span>
+      <span>MongoDB</span>
+      <span>Docker Compose</span>
+      <span>Docker</span>
+      <span>TypeORM</span>
+      <span>Next.js</span>
+      <span>Redis</span>
+      <span>Valkey</span>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section alt">
-  <div class="container contact">
-    <h2>Контакты</h2>
-    <p>Email: youremail@example.com</p>
-    <p>Telegram: @yourusername</p>
+<section class="section container">
+  <!-- EN -->
+  <div class="lang en active">
+    <h3>About Me</h3>
+    <p>Started career early to complement knowledge with practical experience in modern technologies. Actively developing in TypeScript and deepening knowledge in Golang. Strive to apply skills to solve complex and interesting tasks.</p>
+  </div>
+
+  <!-- RU -->
+  <div class="lang ru">
+    <h3>Обо мне</h3>
+    <p>Рано начал карьеру, чтобы дополнить знания практическим опытом работы с современными технологиями. Активно развиваюсь в TypeScript и углубляю знания в Golang. Стремлюсь применять навыки для решения сложных и интересных задач.</p>
   </div>
 </section>
 
 <footer class="footer">
   <div class="container">
-    <p>© 2026 Vladimir. All rights reserved.</p>
+    <p class="lang en active">Resume updated on March 3, 2026</p>
+    <p class="lang ru">Резюме обновлено 3 марта 2026 в 18:35</p>
   </div>
 </footer>
+
+<script>
+  function splitText(element) {
+    const text = element.textContent.trim();
+    element.innerHTML = '';
+    text.split('').forEach((char, i) => {
+      const span = document.createElement('span');
+      span.textContent = char === ' ' ? '\u00A0' : char;
+      span.style.animationDelay = `${i * 0.05}s`;
+      element.appendChild(span);
+    });
+  }
+
+  function setHeights() {
+    const containers = document.querySelectorAll('.hero-text, .section, .footer .container');
+    containers.forEach(container => {
+      const activeLang = container.querySelector('.lang.active');
+      if (activeLang) {
+        container.style.height = `${activeLang.scrollHeight}px`;
+      }
+    });
+  }
+
+  function switchLang(toLang) {
+    const fromLang = toLang === 'en' ? 'ru' : 'en';
+    document.getElementById(`${toLang}Btn`).classList.add('active');
+    document.getElementById(`${fromLang}Btn`).classList.remove('active');
+
+    const containers = document.querySelectorAll('.hero-text, .section, .footer .container');
+    containers.forEach(container => {
+      const toBlock = container.querySelector(`.lang.${toLang}`);
+      if (toBlock) {
+        container.style.height = `${toBlock.scrollHeight}px`;
+      }
+    });
+
+    document.querySelectorAll('.lang.active').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll(`.lang.${toLang}`).forEach(el => el.classList.add('active'));
+  }
+
+  window.addEventListener('load', () => {
+    // document.querySelectorAll('.lang h1, .lang h2, .lang h3, .lang h4').forEach(splitText);
+    setHeights();
+  });
+
+  document.getElementById('enBtn').onclick = () => switchLang('en');
+  document.getElementById('ruBtn').onclick = () => switchLang('ru');
+</script>
 
 </body>
 </html>
