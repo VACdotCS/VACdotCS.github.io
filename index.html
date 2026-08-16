@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vladimir Taburkin — Fullstack Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <div class="logo">Vladimir.dev</div>
+
+    <div class="lang-switch">
+      <button id="enBtn" class="active">EN</button>
+      <button id="ruBtn">RU</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero container">
+  <div class="photo">
+    <div class="photo-overlay">
+      <span>VT</span>
+    </div>
+  </div>
+
+  <div class="hero-text">
+    <!-- EN -->
+    <div class="lang en active">
+      <h1>Vladimir Taburkin</h1>
+      <h2>Fullstack Developer</h2>
+      <p>
+        Fullstack engineer with commercial experience building scalable systems
+        using TypeScript and cloud infrastructure. Designing REST APIs,
+        distributed report pipelines, queue-based processing, and modern SPA interfaces.
+      </p>
+
+      <div class="contacts">
+        <p>Github: <a href="https://github.com/VACdotCS" rel="noopener noreferrer" target="_blank"> link </a></p>
+        <p>Email: tvitworker@gmail.com</p>
+        <p>Location: Krasnodar, Russia</p>
+        <p>Citizenship: Russia (work permit in Russia)</p>
+        <p>Ready to relocate and travel</p>
+      </div>
+    </div>
+
+    <!-- RU -->
+    <div class="lang ru">
+      <h1>Табуркин Владимир</h1>
+      <h2>Fullstack-разработчик</h2>
+      <p>
+        Fullstack-разработчик с коммерческим опытом построения масштабируемых систем
+        на TypeScript и облачной инфраструктуре. Проектирование REST API,
+        распределённых пайплайнов обработки отчётов и современных SPA-интерфейсов.
+      </p>
+
+      <div class="contacts">
+        <p>Github: <a href="https://github.com/VACdotCS" rel="noopener noreferrer" target="_blank"> link </a></p>
+        <p>Email: tvitworker@gmail.com</p>
+        <p>Проживает: Краснодар</p>
+        <p>Гражданство: Россия (разрешение на работу в России)</p>
+        <p>Опыт работы: ТК РФ 6 месяцев, остальное самозанятость</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section container">
+
+  <!-- ================= EN ================= -->
+  <div class="lang en active">
+    <h3>Professional Experience</h3>
+
+    <!-- Sirena AI -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="sirena.png" alt="Sirena AI">
+        </div>
+        <div class="job-title">
+          <h4>Fullstack Developer</h4>
+          <p class="company">Sirena AI · Nov 2025 – Present (11 months)</p>
+        </div>
+      </div>
+      <ul>
+        <li>Designed and implemented background task processing system with BullMQ for 5+ task types: data synchronization, AI content generation, and integration processes.</li>
+        <li>Implemented automatic recovery and retry mechanisms for background tasks, improving system resilience to temporary external service failures.</li>
+        <li>Optimized Wildberries API integration: implemented rate limiting handling, retry policies, and centralized error monitoring through Grafana.</li>
+        <li>Migrated backend services from AWS Lambda/Node.js to Python/FastAPI on VDS infrastructure, adapting background tasks, integrations, and deployment processes.</li>
+        <li>Refactored 10+ key backend modules, reducing component coupling and simplifying further development and maintenance.</li>
+        <li>Implemented centralized production logging based on Grafana Loki, ensuring unified log collection and analysis across services.</li>
+        <li>Designed and executed migration of 1+TB JSON data from DynamoDB + AWS S3 to ClickHouse for analytical scenarios.</li>
+        <li>Covered critical business logic with unit tests and participated in introducing testing practices within the team.</li>
+        <li>Developed admin panel on Angular for internal users of the AI platform.</li>
+      </ul>
+      <p class="note">Part-time self-employment</p>
+    </div>
+
+    <!-- HappyHero -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="hh.png" alt="HappyHero">
+        </div>
+        <div class="job-title">
+          <h4>Fullstack Developer</h4>
+          <p class="company">HappyHero, USA · Jul 2024 – Jun 2025 (1 year)</p>
+        </div>
+      </div>
+      <ul>
+        <li>Led the creation of a backend platform on Node.js from scratch, successfully launching the product to production within 4 months, laying the foundation for user base scaling.</li>
+        <li>Developed 70+ REST APIs for web and mobile clients of the platform.</li>
+        <li>Designed PostgreSQL schema with 50+ interconnected tables and business entities.</li>
+        <li>Implemented analytical data export service for generating user reports via Cron with incremental filling.</li>
+        <li>Integrated Azure OpenAI into business processes for user scenario automation.</li>
+        <li>Configured production service monitoring using Grafana and Prometheus with 20+ metrics and alerts.</li>
+        <li>Ensured high backend performance with p95 response time under 100ms from database to client.</li>
+        <li>Developed a fault-tolerant push notification subsystem handling complex scheduling logic across 10+ timezones (guaranteed delivery of 50k+ messages per day).</li>
+        <li>Built a Telegram Web App for the bot as a separate interface for psychological test interaction.</li>
+        <li>Participated in developing an AI assistant on Python.</li>
+      </ul>
+    </div>
+
+    <!-- First Line Outsourcing -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="flo.png" alt="First Line Outsourcing">
+        </div>
+        <div class="job-title">
+          <h4>Software Engineer</h4>
+          <p class="company">First Line Outsourcing, Krasnodar · April 2024 – June 2025 (1 year 3 month)</p>
+        </div>
+      </div>
+      <p>Backend:</p>
+      <ul>
+        <li>Designed multiple data schemas on PostgreSQL and MongoDB for client projects.</li>
+        <li>Integrated external APIs, payment systems, and third-party services.</li>
+        <li>Configured Docker environments, CI/CD pipelines, and deployment processes on VPS/VDS.</li>
+        <li>Participated in development and launch of 5+ commercial projects.</li>
+        <li>Developed and maintained 3+ microservices for client products.</li>
+        <li>Configured T-Bank payment gateway integration for the MDS project.</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- ================= RU ================= -->
+  <div class="lang ru">
+    <h3>Профессиональный опыт</h3>
+
+    <!-- Сирена АИ -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="sirena.png" alt="Сирена АИ">
+        </div>
+        <div class="job-title">
+          <h4>Fullstack-разработчик</h4>
+          <p class="company">Сирена АИ · Ноя 2025 – н.в. (11 месяцев)</p>
+        </div>
+      </div>
+      <ul>
+        <li>Спроектировал и реализовал систему фоновой обработки на BullMQ для 5+ типов задач: синхронизации данных, генерации AI-контента и интеграционных процессов.</li>
+        <li>Реализовал автоматическое восстановление и retry-механизмы для фоновых задач, повысив устойчивость системы к временным сбоям внешних сервисов.</li>
+        <li>Оптимизировал интеграцию с API Wildberries: реализовал обработку rate limits, retry-политику и централизованный мониторинг ошибок через Grafana.</li>
+        <li>Мигрировал backend-сервисы с AWS Lambda/Node.js на Python/FastAPI в VDS-инфраструктуру, адаптировав фоновые задачи, интеграции и deployment-процессы.</li>
+        <li>Выполнил рефакторинг 10+ ключевых backend-модулей, снизив связанность компонентов и упростив дальнейшее развитие и поддержку системы.</li>
+        <li>Реализовал централизованное логирование production-среды на базе Grafana Loki, обеспечив единый подход к сбору и анализу логов сервисов.</li>
+        <li>Спроектировал и реализовал миграцию 1+ТБ JSON данных из DynamoDB + AWS S3 в ClickHouse для аналитических сценариев.</li>
+        <li>Покрыл критические участки бизнес-логики unit-тестами и участвовал во внедрении практик тестирования в команде.</li>
+        <li>Разработал административную панель на Angular для внутренних пользователей AI-платформы.</li>
+      </ul>
+      <p class="note">Работа по самозанятости (Part-time)</p>
+    </div>
+
+    <!-- HappyHero -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="hh.png" alt="HappyHero">
+        </div>
+        <div class="job-title">
+          <h4>Fullstack-разработчик</h4>
+          <p class="company">HappyHero · Июл 2024 – Июн 2025 (1 год)</p>
+        </div>
+      </div>
+      <ul>
+        <li>Выступил ведущим инженером при создании backend-платформы на Node.js с нуля, успешно доведя продукт до production за 4 месяца и заложив фундамент для масштабирования пользовательской базы.</li>
+        <li>Разработал более 70 REST API для web- и mobile-клиентов платформы.</li>
+        <li>Спроектировал PostgreSQL-схему, включающую более 50 взаимосвязанных таблиц и бизнес-сущностей.</li>
+        <li>Реализовал сервис экспорта аналитических данных для формирования пользовательских отчётов по Cron с инкрементальным заполнением.</li>
+        <li>Интегрировал Azure OpenAI в бизнес-процессы платформы для автоматизации пользовательских сценариев.</li>
+        <li>Настроил мониторинг production-сервисов с использованием Grafana и Prometheus, включая более 20 метрик и алертов.</li>
+        <li>Обеспечил высокую производительность backend-сервисов на уровне p95 времени ответа менее 100 мс от базы данных до клиента.</li>
+        <li>Разработал отказоустойчивую подсистему push-уведомлений, обрабатывающую сложную логику расписаний в 10+ таймзонах (гарантированная доставка >50k сообщений в сутки).</li>
+        <li>Написал Telegram Web App для бота как отдельное место для взаимодействия с поддержкой прохождения психологических тестов.</li>
+        <li>Участвовал в разработке AI-ассистента на Python.</li>
+      </ul>
+      <p class="note">Относится к работе в компании First Line Outsourcing</p>
+    </div>
+
+    <!-- First Line Outsourcing -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="flo.png" alt="First Line Outsourcing">
+        </div>
+        <div class="job-title">
+          <h4>Инженер-программист</h4>
+          <p class="company">First Line Outsourcing, Краснодар · Апр 2024 – Июн 2025 (1 год 3 месяца) · 6 мес ТК РФ · 7 месяцев самозанятость</p>
+        </div>
+      </div>
+      <p>Backend: </p>
+      <ul>
+        <li>Спроектировал множество схем данных на PostgreSQL и MongoDB для клиентских проектов.</li>
+        <li>Интегрировал внешние API, платёжные системы и сторонние сервисы.</li>
+        <li>Настраивал Docker-окружение, CI/CD-пайплайны и процессы деплоя на VPS/VDS.</li>
+        <li>Участвовал в разработке и запуске более 5 коммерческих проектов.</li>
+        <li>Разработал и поддерживал более 3 микросервисов для клиентских продуктов.</li>
+        <li>Настроил работу платёжного шлюза Т-банка для проекта MDS.</li>
+      </ul>
+      <p class="note">ТК РФ 6 мес. | Работа по самозанятости (Part-time)</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="section container">
+  <!-- EN -->
+  <div class="lang en active">
+    <h3>Education</h3>
+    <div class="education">
+      <h4>Kuban State University, Krasnodar</h4>
+      <p>Faculty of Computer Technologies and Applied Mathematics</p>
+      <p>Applied Mathematics and Informatics (Incomplete higher education, expected 2026)</p>
+    </div>
+  </div>
+
+  <!-- RU -->
+  <div class="lang ru">
+    <h3>Образование</h3>
+    <div class="education">
+      <h4>Кубанский государственный университет, Краснодар</h4>
+      <p>Компьютерных технологий и прикладной математики</p>
+      <p>Прикладная математика и информатика (высшее, 2026)</p>
+    </div>
+  </div>
+</section>
+
+<section class="section container">
+  <!-- EN -->
+  <div class="lang en active">
+    <h3>Languages</h3>
+    <ul class="languages">
+      <li>Russian — Native</li>
+      <li>English — B2 (Upper-Intermediate)</li>
+    </ul>
+  </div>
+
+  <!-- RU -->
+  <div class="lang ru">
+    <h3>Знание языков</h3>
+    <ul class="languages">
+      <li>Русский — Родной</li>
+      <li>Английский — B2 — Средне-продвинутый</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section container skills-section">
+  <!-- EN -->
+  <div class="lang en active">
+    <h3>Skills</h3>
+    <div class="skills">
+      <span>SQL</span>
+      <span>JavaScript</span>
+      <span>Git</span>
+      <span>PostgreSQL</span>
+      <span>Node.js</span>
+      <span>HTML</span>
+      <span>Linux</span>
+      <span>English</span>
+      <span>TypeScript</span>
+      <span>React</span>
+      <span>AWS</span>
+      <span>Google Cloud</span>
+      <span>Azure</span>
+      <span>HTML5</span>
+      <span>Python</span>
+      <span>Nest.js</span>
+      <span>Express.js</span>
+      <span>Angular</span>
+      <span>MongoDB</span>
+      <span>Docker Compose</span>
+      <span>Docker</span>
+      <span>TypeORM</span>
+      <span>Next.js</span>
+      <span>Redis</span>
+      <span>Valkey</span>
+      <span>Clickhouse</span>
+    </div>
+  </div>
+  <!-- RU -->
+  <div class="lang ru">
+    <h3>Навыки</h3>
+    <div class="skills">
+      <span>SQL</span>
+      <span>JavaScript</span>
+      <span>Git</span>
+      <span>PostgreSQL</span>
+      <span>Node.js</span>
+      <span>HTML</span>
+      <span>Linux</span>
+      <span>English</span>
+      <span>TypeScript</span>
+      <span>React</span>
+      <span>AWS</span>
+      <span>Google Cloud</span>
+      <span>Azure</span>
+      <span>HTML5</span>
+      <span>Python</span>
+      <span>Nest.js</span>
+      <span>Express.js</span>
+      <span>Angular</span>
+      <span>MongoDB</span>
+      <span>Docker Compose</span>
+      <span>Docker</span>
+      <span>TypeORM</span>
+      <span>Next.js</span>
+      <span>Redis</span>
+      <span>Valkey</span>
+      <span>Clickhouse</span>
+    </div>
+  </div>
+</section>
+
+<section class="section container">
+  <!-- EN -->
+  <div class="lang en active">
+    <h3>About Me</h3>
+    <p>Started career early to complement knowledge with practical experience in modern technologies. Actively developing in TypeScript and deepening knowledge in Golang. Strive to apply skills to solve complex and interesting tasks.</p>
+  </div>
+
+  <!-- RU -->
+  <div class="lang ru">
+    <h3>Обо мне</h3>
+    <p>Рано начал карьеру, чтобы дополнить знания практическим опытом работы с современными технологиями. Активно развиваюсь в TypeScript и углубляю знания в Golang. Стремлюсь применять навыки для решения сложных и интересных задач.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p class="lang en active">Resume updated on July 17, 2026</p>
+    <p class="lang ru">Резюме обновлено 17 июля 2026 в 00:01</p>
+  </div>
+</footer>
+
+<script>
+  function splitText(element) {
+    const text = element.textContent.trim();
+    element.innerHTML = '';
+    text.split('').forEach((char, i) => {
+      const span = document.createElement('span');
+      span.textContent = char === ' ' ? '\u00A0' : char;
+      span.style.animationDelay = `${i * 0.05}s`;
+      element.appendChild(span);
+    });
+  }
+
+  function setHeights() {
+    const containers = document.querySelectorAll('.hero-text, .section, .footer .container');
+    containers.forEach(container => {
+      const activeLang = container.querySelector('.lang.active');
+      if (activeLang) {
+        container.style.height = `${activeLang.scrollHeight}px`;
+      }
+    });
+  }
+
+  function switchLang(toLang) {
+    const fromLang = toLang === 'en' ? 'ru' : 'en';
+    document.getElementById(`${toLang}Btn`).classList.add('active');
+    document.getElementById(`${fromLang}Btn`).classList.remove('active');
+
+    const containers = document.querySelectorAll('.hero-text, .section, .footer .container');
+    containers.forEach(container => {
+      const toBlock = container.querySelector(`.lang.${toLang}`);
+      if (toBlock) {
+        container.style.height = `${toBlock.scrollHeight}px`;
+      }
+    });
+
+    document.querySelectorAll('.lang.active').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll(`.lang.${toLang}`).forEach(el => el.classList.add('active'));
+  }
+
+  window.addEventListener('load', () => {
+    // document.querySelectorAll('.lang h1, .lang h2, .lang h3, .lang h4').forEach(splitText);
+    setHeights();
+  });
+
+  document.getElementById('enBtn').onclick = () => switchLang('en');
+  document.getElementById('ruBtn').onclick = () => switchLang('ru');
+</script>
+
+</body>
+</html>
