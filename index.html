@@ -401,6 +401,10 @@
 
   window.addEventListener('load', () => {
     // document.querySelectorAll('.lang h1, .lang h2, .lang h3, .lang h4').forEach(splitText);
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') ?? 'en';
+
+    switchLang(lang);
     setHeights();
   });
 
