@@ -430,4 +430,27 @@ h1, h2, h3, h4 {
     .company-logo {
         margin-bottom: 10px;
     }
+
+    .hero-text {
+        height: auto !important;
+    }
+
+    .hero-text .lang {
+        position: static;
+        opacity: 0;
+        display: none;
+    }
+
+    .hero-text .lang.active {
+        display: block;
+        opacity: 1;
+    }
+
+    .lang h1 h2 {
+        text-align: center;
+    }
+
+    .lang p {
+        text-align: left;
+    }
 }
