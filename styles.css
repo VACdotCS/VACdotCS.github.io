@@ -684,6 +684,7 @@ body {
 .sticky.blue { background-color: #bfdbfe; animation-delay: -2s; }
 .sticky.pink { background-color: #fbcfe8; animation-delay: -4s; }
 .sticky.white { background-color: #ffffff; animation-delay: -1s; }
+.sticky.orange { background-color: #fed7aa; animation-delay: -3s; }
 
 .sticky-img {
     width: 220px;
