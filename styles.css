@@ -413,3 +413,86 @@ h1, h2, h3, h4 {
 .logo, .photo, .photo-overlay, .skills span, .company-logo {
     cursor: default;
 }
+
+body {
+    overflow-x: hidden;
+}
+
+/* Decorative Miro Stickies */
+.decor-card {
+    position: absolute;
+    pointer-events: none;
+    transform: rotate(var(--rot));
+    animation: float-sticky 6s ease-in-out infinite;
+    user-select: none;
+    z-index: 10;
+}
+
+.sticky {
+    width: 120px;
+    height: 120px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.1), inset 0 0 10px rgba(0,0,0,0.02);
+    border-radius: 2px;
+}
+
+.sticky.yellow { background-color: #fef08a; animation-delay: 0s; }
+.sticky.blue { background-color: #bfdbfe; animation-delay: -2s; }
+.sticky.pink { background-color: #fbcfe8; animation-delay: -4s; }
+.sticky.white { background-color: #ffffff; animation-delay: -1s; }
+
+.sticky-img {
+    width: 220px;
+    background: #fff;
+    padding: 8px 8px 28px 8px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.15);
+    border-radius: 2px;
+}
+.sticky-img img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #e2e8f0;
+}
+.sticky-img::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 60px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.sticky-caption {
+    font-size: 0.85rem;
+    text-align: center;
+    color: #444;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+.decor-arrow {
+    position: absolute;
+    overflow: visible;
+}
+
+@keyframes float-sticky {
+    0%, 100% { transform: translateY(0) rotate(var(--rot)); }
+    50% { transform: translateY(-6px) rotate(var(--rot)); }
+}
+
+@media (max-width: 1280px) {
+    .decor-card {
+        display: none;
+    }
+}

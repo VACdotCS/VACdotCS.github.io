@@ -33,7 +33,16 @@
   </div>
 </header>
 
-<section class="hero container">
+<section class="hero container" style="position: relative;">
+  <!-- SVG Marker for Arrows -->
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#444" />
+      </marker>
+    </defs>
+  </svg>
+
   <div class="photo">
     <div class="photo-overlay">
       <span>VT</span>
@@ -128,7 +137,44 @@
   </div>
 </section>
 
-<section class="section container">
+<section class="section container" style="position: relative;">
+
+  <!-- Decorative Taped Image -->
+  <div class="decor-card sticky-img" style="top: 100px; left: -260px; --rot: -4deg;">
+    <img src="img.png" alt="SSO Architecture">
+    <div class="sticky-caption">Auth Service Arch</div>
+  </div>
+
+  <!-- Decorative BPMN Diagram -->
+  <div class="decor-card sticky white" style="top: 250px; right: -280px; --rot: 5deg; width: auto; height: auto;">
+    <div style="text-align: left;">
+      <p style="margin-bottom: 8px; font-size: 0.75rem; color: #666; text-transform: uppercase;">Payment BPMN</p>
+      <svg width="200" height="70" viewBox="0 0 240 80" fill="none" stroke="#333" stroke-width="1.5">
+        <!-- Start Event -->
+        <circle cx="20" cy="40" r="10" fill="#fff" />
+        <path d="M 30 40 L 50 40" marker-end="url(#arrowhead)"/>
+        
+        <!-- Task -->
+        <rect x="55" y="25" width="50" height="30" rx="4" fill="#e2e8f0" stroke="#64748b"/>
+        <text x="80" y="44" font-size="9" fill="#333" stroke="none" text-anchor="middle" font-family="sans-serif">Validate</text>
+        <path d="M 105 40 L 125 40" marker-end="url(#arrowhead)"/>
+        
+        <!-- Gateway (XOR) -->
+        <polygon points="140,25 155,40 140,55 125,40" fill="#fef08a" stroke="#ca8a04"/>
+        <text x="140" y="44" font-size="12" fill="#ca8a04" stroke="none" text-anchor="middle">X</text>
+        
+        <path d="M 155 40 L 175 40" marker-end="url(#arrowhead)"/>
+        <path d="M 140 55 L 140 65 L 175 65" marker-end="url(#arrowhead)"/>
+        
+        <!-- Tasks -->
+        <rect x="180" y="25" width="40" height="30" rx="4" fill="#bfdbfe" stroke="#3b82f6"/>
+        <text x="200" y="44" font-size="9" fill="#333" stroke="none" text-anchor="middle" font-family="sans-serif">Pay</text>
+        
+        <!-- End Event -->
+        <circle cx="190" cy="65" r="8" fill="#fff" stroke-width="3"/>
+      </svg>
+    </div>
+  </div>
 
   <!-- ================= EN ================= -->
   <div class="lang en active">
@@ -164,15 +210,18 @@
         <li>Introduced centralized production logging using Grafana Loki, reducing incident investigation time and
           improving service observability.
         </li>
-        <li>Designed and executed migration of more than 1 TB of data from DynamoDB and AWS S3 to ClickHouse, enabling
-          large-scale analytical processing.
+        <li>
+          Designed and executed migration of more than 1 TB of data from DynamoDB and AWS S3 to ClickHouse, enabling large-scale analytical processing.
+          <div class="decor-card sticky pink" style="top: -10px; right: -180px; --rot: 4deg;">
+            <p>1TB+ Data<br/>Migrated</p>
+            <svg class="decor-arrow" style="right: 100%; top: 50%; width: 60px; height: 40px;" viewBox="0 0 60 40">
+              <path d="M 60 20 Q 30 20 0 10" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
         </li>
-        <li>Covered critical business logic with unit tests and contributed to adoption of testing practices, reducing
-          regression risks.
-        </li>
-        <li>Developed an Angular-based admin panel for internal AI platform users.</li>
+        <li>Developed and optimized a dynamic price calculation module, implementing efficient caching strategies in Redis and Valkey to ensure high system responsiveness.</li>
       </ul>
-      <p class="note">Contractor</p>
+      <span class="note">Stack: Python, FastAPI, TypeScript, Node.js, Clickhouse, BullMQ, Kafka, Redis</span>
     </div>
 
     <!-- HappyHero -->
@@ -187,8 +236,14 @@
         </div>
       </div>
       <ul>
-        <li>Acted as the lead backend engineer in building a Node.js (NestJS) platform from scratch, delivering the
-          product to production within 4 months.
+        <li>
+          Acted as the lead backend engineer in building a Node.js (NestJS) platform from scratch, delivering the product to production within 4 months.
+          <div class="decor-card sticky blue" style="top: -10px; right: -180px; --rot: 8deg;">
+            <p>Microservices<br/>Architecture</p>
+            <svg class="decor-arrow" style="right: 100%; bottom: 30%; width: 60px; height: 50px;" viewBox="0 0 60 50">
+              <path d="M 60 40 Q 30 40 0 20" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
         </li>
         <li>Developed 70+ REST APIs for web and mobile clients, enabling core product functionality and user
           workflows.
@@ -203,7 +258,15 @@
         <li>Introduced production monitoring using Grafana and Prometheus, improving incident detection and service
           reliability.
         </li>
-        <li>Optimized backend services to achieve p95 response times below 100 ms.</li>
+        <li>
+          Optimized backend services to achieve p95 response times below 100 ms.
+          <div class="decor-card sticky yellow" style="top: -20px; left: -180px; --rot: -6deg;">
+            <p>p95 &lt; 100ms</p>
+            <svg class="decor-arrow" style="left: 100%; top: 50%; width: 70px; height: 40px;" viewBox="0 0 70 40">
+              <path d="M 0 20 Q 35 20 65 10" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
+        </li>
         <li>Developed a fault-tolerant push notification subsystem supporting complex scheduling logic across 10+ time
           zones and delivering 50k+ notifications daily.
         </li>
@@ -271,8 +334,14 @@
         <li>Внедрил централизованное логирование на базе Grafana Loki, сократив время диагностики production-инцидентов
           и повысив прозрачность работы сервисов.
         </li>
-        <li>Спроектировал и реализовал миграцию более 1 ТБ данных из DynamoDB и AWS S3 в ClickHouse, обеспечив
-          аналитическую обработку больших объёмов данных.
+        <li>
+          Спроектировал и реализовал миграцию более 1 ТБ данных из DynamoDB и AWS S3 в ClickHouse, обеспечив аналитическую обработку больших объёмов данных.
+          <div class="decor-card sticky pink" style="top: -10px; right: -180px; --rot: 4deg;">
+            <p>1TB+ Data<br/>Migrated</p>
+            <svg class="decor-arrow" style="right: 100%; top: 50%; width: 60px; height: 40px;" viewBox="0 0 60 40">
+              <path d="M 60 20 Q 30 20 0 10" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
         </li>
         <li>Покрыл критические участки бизнес-логики unit-тестами и участвовал во внедрении практик тестирования, снизив
           риск регрессий при развитии продукта.
@@ -294,8 +363,14 @@
         </div>
       </div>
       <ul>
-        <li>Выступил ведущим инженером при создании backend-платформы на Node.js (NestJS) с нуля, обеспечив запуск
-          продукта в production за 4 месяца.
+        <li>
+          Выступил ведущим инженером при создании backend-платформы на Node.js (NestJS) с нуля, обеспечив запуск продукта в production за 4 месяца.
+          <div class="decor-card sticky blue" style="top: -10px; right: -180px; --rot: 8deg;">
+            <p>Microservices<br/>Architecture</p>
+            <svg class="decor-arrow" style="right: 100%; bottom: 30%; width: 60px; height: 50px;" viewBox="0 0 60 50">
+              <path d="M 60 40 Q 30 40 0 20" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
         </li>
         <li>Разработал более 70 REST API для web- и mobile-клиентов, обеспечив поддержку ключевых пользовательских
           сценариев и развитие продуктовой функциональности.
@@ -310,7 +385,15 @@
         <li>Настроил мониторинг production-сервисов на базе Grafana и Prometheus, повысив скорость обнаружения
           инцидентов и качество сопровождения системы.
         </li>
-        <li>Оптимизировал backend-сервисы до p95 менее 100 мс, обеспечив быстрый отклик пользовательских сценариев.</li>
+        <li>
+          Оптимизировал backend-сервисы до p95 менее 100 мс, обеспечив быстрый отклик пользовательских сценариев.
+          <div class="decor-card sticky yellow" style="top: -20px; left: -180px; --rot: -6deg;">
+            <p>p95 &lt; 100ms</p>
+            <svg class="decor-arrow" style="left: 100%; top: 50%; width: 70px; height: 40px;" viewBox="0 0 70 40">
+              <path d="M 0 20 Q 35 20 65 10" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
+        </li>
         <li>Разработал отказоустойчивую подсистему push-уведомлений с поддержкой 10+ таймзон и гарантированной доставкой
           более 50k сообщений в сутки.
         </li>
