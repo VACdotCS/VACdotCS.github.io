@@ -643,12 +643,19 @@
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container">
-    <p class="lang en active">Resume updated on July 26, 2026</p>
-    <p class="lang ru">Резюме обновлено 26 июля 2026</p>
+<div class="footer-wrapper" style="position: relative; margin-top: 60px;">
+  <!-- Easter Egg Gopher -->
+  <div class="gopher-wrapper" onclick="triggerGopher(this)">
+    <img src="imgs/golang.png" alt="Gopher" class="gopher-img">
   </div>
-</footer>
+
+  <footer class="footer" style="position: relative; z-index: 2; background-color: var(--bg); margin-top: 0;">
+    <div class="container">
+      <p class="lang en active">Resume updated on July 26, 2026</p>
+      <p class="lang ru">Резюме обновлено 26 июля 2026</p>
+    </div>
+  </footer>
+</div>
 
 <script>
   function switchLang(toLang) {
