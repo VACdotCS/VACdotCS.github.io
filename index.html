@@ -38,7 +38,7 @@
   <svg width="0" height="0" style="position: absolute;">
     <defs>
       <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-        <polygon points="0 0, 10 3.5, 0 7" fill="#444" />
+        <polygon points="0 0, 10 3.5, 0 7" fill="#444"/>
       </marker>
     </defs>
   </svg>
@@ -140,38 +140,74 @@
 <section class="section container" style="position: relative;">
 
   <!-- Decorative Taped Image -->
-  <div class="decor-card sticky-img" style="top: 100px; left: -260px; --rot: -4deg;">
+  <div class="decor-card sticky-img zoomable" style="top: 100px; left: -260px; --rot: -4deg;">
     <img src="img.png" alt="SSO Architecture">
     <div class="sticky-caption">Auth Service Arch</div>
   </div>
 
   <!-- Decorative BPMN Diagram -->
-  <div class="decor-card sticky white" style="top: 250px; right: -280px; --rot: 5deg; width: auto; height: auto;">
+  <div class="decor-card sticky white zoomable" style="top: 250px; right: -310px; --rot: 5deg; width: auto; height: auto;">
     <div style="text-align: left;">
-      <p style="margin-bottom: 8px; font-size: 0.75rem; color: #666; text-transform: uppercase;">Payment BPMN</p>
-      <svg width="200" height="70" viewBox="0 0 240 80" fill="none" stroke="#333" stroke-width="1.5">
-        <!-- Start Event -->
-        <circle cx="20" cy="40" r="10" fill="#fff" />
-        <path d="M 30 40 L 50 40" marker-end="url(#arrowhead)"/>
+      <p style="margin-bottom: 8px; font-size: 0.75rem; color: #666; text-transform: uppercase;">Auth & Payment BPMN</p>
+      <svg width="260" height="70" viewBox="0 0 540 120" fill="none" stroke="#333" stroke-width="1.5" style="font-family: sans-serif;">
+        <!-- Start -->
+        <circle cx="20" cy="50" r="10" fill="#fff" />
+        <path d="M 30 50 L 55 50" marker-end="url(#arrowhead)"/>
         
-        <!-- Task -->
-        <rect x="55" y="25" width="50" height="30" rx="4" fill="#e2e8f0" stroke="#64748b"/>
-        <text x="80" y="44" font-size="9" fill="#333" stroke="none" text-anchor="middle" font-family="sans-serif">Validate</text>
-        <path d="M 105 40 L 125 40" marker-end="url(#arrowhead)"/>
+        <!-- Task 1: Fetch Auth -->
+        <rect x="60" y="35" width="60" height="30" rx="4" fill="#e2e8f0" stroke="#64748b"/>
+        <text x="90" y="54" font-size="12" fill="#333" stroke="none" text-anchor="middle">Fetch Auth</text>
+        <path d="M 120 50 L 145 50" marker-end="url(#arrowhead)"/>
         
-        <!-- Gateway (XOR) -->
-        <polygon points="140,25 155,40 140,55 125,40" fill="#fef08a" stroke="#ca8a04"/>
-        <text x="140" y="44" font-size="12" fill="#ca8a04" stroke="none" text-anchor="middle">X</text>
+        <!-- Gateway 1: Auth OK? -->
+        <polygon points="160,35 175,50 160,65 145,50" fill="#fef08a" stroke="#ca8a04"/>
+        <text x="160" y="54" font-size="14" fill="#ca8a04" stroke="none" text-anchor="middle">X</text>
         
-        <path d="M 155 40 L 175 40" marker-end="url(#arrowhead)"/>
-        <path d="M 140 55 L 140 65 L 175 65" marker-end="url(#arrowhead)"/>
+        <!-- Pathway: Auth Fail -->
+        <path d="M 160 65 L 160 90 L 195 90" marker-end="url(#arrowhead)"/>
+        <text x="175" y="85" font-size="10" fill="#666" stroke="none">Fail</text>
+        <rect x="200" y="75" width="60" height="30" rx="4" fill="#fecaca" stroke="#ef4444"/>
+        <text x="230" y="94" font-size="12" fill="#333" stroke="none" text-anchor="middle">Return 401</text>
+        <path d="M 260 90 L 285 90" marker-end="url(#arrowhead)"/>
+        <circle cx="295" cy="90" r="8" fill="#fff" stroke-width="3"/>
         
-        <!-- Tasks -->
-        <rect x="180" y="25" width="40" height="30" rx="4" fill="#bfdbfe" stroke="#3b82f6"/>
-        <text x="200" y="44" font-size="9" fill="#333" stroke="none" text-anchor="middle" font-family="sans-serif">Pay</text>
+        <!-- Pathway: Auth OK -->
+        <path d="M 175 50 L 205 50" marker-end="url(#arrowhead)"/>
+        <text x="190" y="45" font-size="10" fill="#666" stroke="none">OK</text>
         
-        <!-- End Event -->
-        <circle cx="190" cy="65" r="8" fill="#fff" stroke-width="3"/>
+        <!-- Task 2: Process Payment -->
+        <rect x="210" y="35" width="70" height="30" rx="4" fill="#bfdbfe" stroke="#3b82f6"/>
+        <text x="245" y="54" font-size="12" fill="#333" stroke="none" text-anchor="middle">Process Pay</text>
+        <path d="M 280 50 L 305 50" marker-end="url(#arrowhead)"/>
+        
+        <!-- Gateway 2: Payment Status -->
+        <polygon points="320,35 335,50 320,65 305,50" fill="#fef08a" stroke="#ca8a04"/>
+        <text x="320" y="54" font-size="14" fill="#ca8a04" stroke="none" text-anchor="middle">X</text>
+        
+        <!-- Pathway: Pay Fail -->
+        <path d="M 320 65 L 320 90 L 355 90" marker-end="url(#arrowhead)"/>
+        <text x="335" y="85" font-size="10" fill="#666" stroke="none">Fail</text>
+        <rect x="360" y="75" width="60" height="30" rx="4" fill="#fecaca" stroke="#ef4444"/>
+        <text x="390" y="94" font-size="12" fill="#333" stroke="none" text-anchor="middle">Rollback</text>
+        <path d="M 420 90 L 445 90" marker-end="url(#arrowhead)"/>
+        <circle cx="455" cy="90" r="8" fill="#fff" stroke-width="3"/>
+        
+        <!-- Pathway: Pay Success -->
+        <path d="M 335 50 L 365 50" marker-end="url(#arrowhead)"/>
+        <text x="350" y="45" font-size="10" fill="#666" stroke="none">OK</text>
+        
+        <!-- Task 3: Update DB -->
+        <rect x="370" y="35" width="50" height="30" rx="4" fill="#bbf7d0" stroke="#22c55e"/>
+        <text x="395" y="54" font-size="12" fill="#333" stroke="none" text-anchor="middle">Update DB</text>
+        <path d="M 420 50 L 435 50" marker-end="url(#arrowhead)"/>
+        
+        <!-- Task 4: Webhook -->
+        <rect x="440" y="35" width="60" height="30" rx="4" fill="#e2e8f0" stroke="#64748b"/>
+        <text x="470" y="54" font-size="12" fill="#333" stroke="none" text-anchor="middle">Webhook</text>
+        <path d="M 500 50 L 525 50" marker-end="url(#arrowhead)"/>
+        
+        <!-- End Success -->
+        <circle cx="535" cy="50" r="8" fill="#fff" stroke-width="3"/>
       </svg>
     </div>
   </div>
@@ -211,7 +247,8 @@
           improving service observability.
         </li>
         <li>
-          Designed and executed migration of more than 1 TB of data from DynamoDB and AWS S3 to ClickHouse, enabling large-scale analytical processing.
+          Designed and executed migration of more than 1 TB of data from DynamoDB and AWS S3 to ClickHouse, enabling
+          large-scale analytical processing.
           <div class="decor-card sticky pink" style="top: -10px; right: -180px; --rot: 4deg;">
             <p>1TB+ Data<br/>Migrated</p>
             <svg class="decor-arrow" style="right: 100%; top: 50%; width: 60px; height: 40px;" viewBox="0 0 60 40">
@@ -219,7 +256,9 @@
             </svg>
           </div>
         </li>
-        <li>Developed and optimized a dynamic price calculation module, implementing efficient caching strategies in Redis and Valkey to ensure high system responsiveness.</li>
+        <li>Developed and optimized a dynamic price calculation module, implementing efficient caching strategies in
+          Redis and Valkey to ensure high system responsiveness.
+        </li>
       </ul>
       <span class="note">Stack: Python, FastAPI, TypeScript, Node.js, Clickhouse, BullMQ, Kafka, Redis</span>
     </div>
@@ -237,7 +276,8 @@
       </div>
       <ul>
         <li>
-          Acted as the lead backend engineer in building a Node.js (NestJS) platform from scratch, delivering the product to production within 4 months.
+          Acted as the lead backend engineer in building a Node.js (NestJS) platform from scratch, delivering the
+          product to production within 4 months.
           <div class="decor-card sticky blue" style="top: -10px; right: -180px; --rot: 8deg;">
             <p>Microservices<br/>Architecture</p>
             <svg class="decor-arrow" style="right: 100%; bottom: 30%; width: 60px; height: 50px;" viewBox="0 0 60 50">
@@ -335,7 +375,8 @@
           и повысив прозрачность работы сервисов.
         </li>
         <li>
-          Спроектировал и реализовал миграцию более 1 ТБ данных из DynamoDB и AWS S3 в ClickHouse, обеспечив аналитическую обработку больших объёмов данных.
+          Спроектировал и реализовал миграцию более 1 ТБ данных из DynamoDB и AWS S3 в ClickHouse, обеспечив
+          аналитическую обработку больших объёмов данных.
           <div class="decor-card sticky pink" style="top: -10px; right: -180px; --rot: 4deg;">
             <p>1TB+ Data<br/>Migrated</p>
             <svg class="decor-arrow" style="right: 100%; top: 50%; width: 60px; height: 40px;" viewBox="0 0 60 40">
@@ -364,7 +405,8 @@
       </div>
       <ul>
         <li>
-          Выступил ведущим инженером при создании backend-платформы на Node.js (NestJS) с нуля, обеспечив запуск продукта в production за 4 месяца.
+          Выступил ведущим инженером при создании backend-платформы на Node.js (NestJS) с нуля, обеспечив запуск
+          продукта в production за 4 месяца.
           <div class="decor-card sticky blue" style="top: -10px; right: -180px; --rot: 8deg;">
             <p>Microservices<br/>Architecture</p>
             <svg class="decor-arrow" style="right: 100%; bottom: 30%; width: 60px; height: 50px;" viewBox="0 0 60 50">
@@ -630,6 +672,13 @@
     const params = new URLSearchParams(window.location.search);
     const lang = params.get('lang') ?? 'en';
     switchLang(lang);
+
+    // Make specific decor cards zoomable
+    document.querySelectorAll('.zoomable').forEach(card => {
+      card.onclick = function() {
+        this.classList.toggle('zoomed');
+      };
+    });
   });
 
   document.getElementById('enBtn').onclick = () => switchLang('en');

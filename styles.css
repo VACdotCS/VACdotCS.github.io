@@ -421,11 +421,53 @@ body {
 /* Decorative Miro Stickies */
 .decor-card {
     position: absolute;
-    pointer-events: none;
     transform: rotate(var(--rot));
     animation: float-sticky 6s ease-in-out infinite;
     user-select: none;
     z-index: 10;
+}
+
+.decor-card:not(.zoomable) {
+    pointer-events: none;
+}
+
+.zoomable {
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    pointer-events: auto;
+}
+
+.zoomable:hover {
+    animation-play-state: paused;
+}
+
+.decor-arrow {
+    pointer-events: none;
+}
+
+.zoomable.zoomed {
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.8) !important;
+    z-index: 9999 !important;
+    animation: none !important;
+    box-shadow: 0 0 0 100vw rgba(0,0,0,0.5), 0 20px 50px rgba(0,0,0,0.4) !important;
+    cursor: zoom-out;
+}
+
+/* Invisible overlay to catch clicks outside the card and block background interactions */
+.zoomable.zoomed::after {
+    content: '';
+    position: absolute;
+    top: -2000px;
+    left: -2000px;
+    right: -2000px;
+    bottom: -2000px;
+    z-index: -1;
+    cursor: zoom-out;
 }
 
 .sticky {
