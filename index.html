@@ -694,76 +694,76 @@
     document.getElementById(`${toLang}Btn`).classList.add('active');
     document.getElementById(`${fromLang}Btn`).classList.remove('active');
 
-      // Toggle active classes on content
-      document.querySelectorAll('.lang.active').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll(`.lang.${toLang}`).forEach(el => el.classList.add('active'));
+    // Toggle active classes on content
+    document.querySelectorAll('.lang.active').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll(`.lang.${toLang}`).forEach(el => el.classList.add('active'));
 
-      // Update URL parameter without reloading
-      const newUrl = new URL(window.location);
-      newUrl.searchParams.set('lang', toLang);
-      window.history.replaceState({}, '', newUrl);
-    }
+    // Update URL parameter without reloading
+    const newUrl = new URL(window.location);
+    newUrl.searchParams.set('lang', toLang);
+    window.history.replaceState({}, '', newUrl);
+  }
 
-    window.addEventListener('load', () => {
-      const params = new URLSearchParams(window.location.search);
-      const lang = params.get('lang') ?? 'en';
-      switchLang(lang);
+  window.addEventListener('load', () => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') ?? 'en';
+    switchLang(lang);
 
-      // Make specific decor cards zoomable
-      document.querySelectorAll('.zoomable').forEach(card => {
-      card.onclick = function() {
-      this.classList.toggle('zoomed');
-    };
+    // Make specific decor cards zoomable
+    document.querySelectorAll('.zoomable').forEach(card => {
+      card.onclick = function () {
+        this.classList.toggle('zoomed');
+      };
     });
 
-      // Scatter easter eggs randomly
-      const eggs = Array.from(document.querySelectorAll('.easter-egg-icon'));
-      for (let i = eggs.length - 1; i > 0; i--) {
+    // Scatter easter eggs randomly
+    const eggs = Array.from(document.querySelectorAll('.easter-egg-icon'));
+    for (let i = eggs.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [eggs[i], eggs[j]] = [eggs[j], eggs[i]];
     }
-      eggs.forEach((egg, index) => {
+    eggs.forEach((egg, index) => {
       const rand = Math.random();
       const basePct = index * 25;
       egg.style.left = `calc(${basePct + rand * 25}% - ${rand * 60}px)`;
     });
-    });
+  });
 
-      document.getElementById('enBtn').onclick = () => switchLang('en');
-      document.getElementById('ruBtn').onclick = () => switchLang('ru');
+  document.getElementById('enBtn').onclick = () => switchLang('en');
+  document.getElementById('ruBtn').onclick = () => switchLang('ru');
 
-      const iconQuotes = {
-      golang: {
+  const iconQuotes = {
+    golang: {
       img: 'imgs/golang.png',
       quote: 'Я люблю Go за его минимализм, ультимативную прагматичность и невероятно приятную модель многопоточности. Это язык, где ты не тратишь время на борьбу с абстракциями, а просто решаешь сложные инженерные задачи с удовольствием и предсказуемым результатом.'
     },
-      nodejs: {
+    nodejs: {
       img: 'imgs/nodejs.png',
       quote: 'Первый коммерческий опыт на нём, в классной команде! Асинхронность, Event Loop и дикая экосистема npm. Здесь я научился быстро собирать фичи и деплоить продукты, которыми сразу пользуются люди.'
     },
-      python: {
+    python: {
       img: 'imgs/python.png',
       quote: 'Учил его ещё в школе, а в универе и на проектах познал его мощь в ML и статанализе. Пишешь как на псевдокоде, а под капотом ворочаются гигабайты данных. Незаменимый инструмент для Data Science.'
     },
-      cpp: {
+    cpp: {
       img: 'imgs/cpp.png',
       quote: 'С него я начинал, читая ту самую сложную книгу Лафоре. Дочитал до конца и понял: управлять памятью вручную — это настоящее искусство. Он навсегда заложил мощнейший фундамент моего инженерного мышления.'
     }
-    };
+  };
 
-      function openIconModal(iconKey) {
-      const data = iconQuotes[iconKey];
-      if (data) {
+  function openIconModal(iconKey) {
+    const data = iconQuotes[iconKey];
+    if (data) {
       document.getElementById('modalIconImg').src = data.img;
       document.getElementById('modalQuoteText').textContent = data.quote;
       document.getElementById('iconModal').classList.add('show');
     }
-    }
+  }
 
-      function closeIconModal(e) {
-      if (e) e.stopPropagation();
-      document.getElementById('iconModal').classList.remove('show');
-    }
+  function closeIconModal(e) {
+    if (e) e.stopPropagation();
+    document.getElementById('iconModal').classList.remove('show');
+  }
 </script>
 
 </body>
