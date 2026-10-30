@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vladimir Taburkin - Frontend Developer</title>
+
+  <!-- SEO & Open Graph Tags -->
+  <meta name="description"
+        content="Frontend engineer with commercial experience building responsive, high-performance web applications using React, TypeScript, Next.js, and modern web technologies."/>
+  <meta property="og:title" content="Vladimir Taburkin - Frontend Developer"/>
+  <meta property="og:description"
+        content="Frontend engineer with commercial experience building responsive, high-performance web applications using React, TypeScript, Next.js, and modern web technologies."/>
+  <meta property="og:type" content="website"/>
+
+  <!-- Favicon -->
+  <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <link rel="stylesheet" href="../styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <div class="logo">Vladimir.dev</div>
+
+    <div class="lang-switch">
+      <button id="enBtn" class="active">EN</button>
+      <button id="ruBtn">RU</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero container" style="position: relative;">
+  <!-- SVG Marker for Arrows -->
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#444"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <div class="photo">
+    <div class="photo-overlay">
+      <span>VT</span>
+    </div>
+  </div>
+
+  <div class="hero-text">
+    <!-- EN -->
+    <div class="lang en active">
+      <h1>Vladimir Taburkin</h1>
+      <h2>Frontend Developer</h2>
+      <p>
+        Frontend engineer with commercial experience building responsive, accessible,
+        and high-performance web applications using React, Next.js (App Router), and Angular 18+.
+        Specialized in Figma to code translation, cross-screen adaptive layouts, page load &amp; RAM optimization,
+        Telegram Web Apps (TWA), and seamless API / BFF integrations.
+      </p>
+
+      <div class="contacts">
+        <p>Github: <a href="https://github.com/VACdotCS" rel="noopener noreferrer"
+                      target="_blank">github.com/VACdotCS</a></p>
+        <p>Telegram: <a href="https://t.me/tvitworker" rel="noopener noreferrer" target="_blank">@tvitworker</a></p>
+        <p>Email: <a href="mailto:tvitworker@gmail.com">tvitworker@gmail.com</a></p>
+        <p>Location: Krasnodar, Russia</p>
+        <p>Citizenship: Russia (work permit in Russia)</p>
+        <p>Job formats: Official employment, self-employed</p>
+      </div>
+    </div>
+
+    <!-- RU -->
+    <div class="lang ru">
+      <h1>Табуркин Владимир</h1>
+      <h2>Frontend-разработчик</h2>
+      <p>
+        Frontend-разработчик с коммерческим опытом создания отзывчивых, доступных
+        и высокопроизводительных веб-приложений на React, Next.js (с роутингом по папкам / App Router) и Angular 18+.
+        Экспертиза в вёрстке по макетам Figma, адаптации под любые экраны, оптимизации скорости загрузки и потребления ОЗУ,
+        разработке Telegram Web Apps (TWA) и интеграции с API и BFF.
+      </p>
+
+      <div class="contacts">
+        <p>Github: <a href="https://github.com/VACdotCS" rel="noopener noreferrer"
+                      target="_blank">github.com/VACdotCS</a></p>
+        <p>Telegram: <a href="https://t.me/tvitworker" rel="noopener noreferrer" target="_blank">@tvitworker</a></p>
+        <p>Email: <a href="mailto:tvitworker@gmail.com">tvitworker@gmail.com</a></p>
+        <p>Проживает: Краснодар</p>
+        <p>Гражданство: Россия (разрешение на работу в России)</p>
+        <p>Форматы работы: ТК РФ, самозанятость, ИП</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT ME SECTION -->
+<section class="section container">
+  <!-- EN -->
+  <div class="lang en active">
+    <h3>About Me</h3>
+    <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 12px;">
+      I am a Frontend Developer dedicated to crafting fluid, intuitive, and robust user interfaces.
+      I focus on clean architecture, component reusability, and rock-solid state management, bridging design visions
+      with reliable engineering.
+    </p>
+    <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 12px;">
+      My primary tech stack revolves around Next.js (App Router), Angular 18+, React, and TypeScript.
+      I pay meticulous attention to details: pixel-perfect layout from Figma, seamless cross-screen adaptation,
+      page load speed, memory (RAM) optimization, and accessibility.
+    </p>
+    <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 12px;">
+      I have experience building Telegram Web Apps (TWA) with payments integration, developing analytical SPA dashboards with unified data table rendering and Excel export,
+      and implementing high-performance infinite scroll feeds backed by BFF architectures.
+      I actively collaborate with UI/UX designers to refine requirements whenever edge cases require technical or ergonomic adjustments.
+    </p>
+    <p style="font-size: 1.05rem; line-height: 1.7;">
+      Having solid backend foundations enables me to design cleaner API contracts, handle data integration gracefully,
+      and communicate efficiently across full product teams.
+    </p>
+  </div>
+
+  <!-- RU -->
+  <div class="lang ru">
+    <h3>Обо мне</h3>
+    <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 12px;">
+      Я Frontend-разработчик, увлечённый созданием плавных, отзывчивых и удобных пользовательских интерфейсов.
+      Уделяю ключевое внимание чистоте архитектуры компонентов, переиспользуемости кода и предсказуемости состояния приложения.
+    </p>
+    <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 12px;">
+      Мой основной стек — Next.js (с роутингом по папкам / App Router), Angular 18+, React и TypeScript.
+      Внимательно отношусь к деталям: точной вёрстке по Figma, адаптации под любые экраны, скорости загрузки страниц
+      и оптимизации потребления оперативной памяти браузера.
+    </p>
+    <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 12px;">
+      Имею опыт запуска Telegram Web Apps (TWA) с интеграцией оплаты, разработки сложных SPA-дэшбордов с единой системой рендеринга таблиц и экспортом в Excel,
+      а также построения бесконечных лент с BFF-архитектурой. Тесно взаимодействую с дизайнерами, дорабатывая требования к макетам при необходимости.
+    </p>
+    <p style="font-size: 1.05rem; line-height: 1.7;">
+      Понимание бэкенд-архитектуры помогает мне проектировать эффективные контракты взаимодействия, легко интегрироваться с API
+      и говорить на одном языке со всей командой разработки.
+    </p>
+  </div>
+</section>
+
+<section class="section container" style="position: relative;">
+
+  <!-- Decorative Taped Image / Sticky -->
+  <div class="decor-card sticky yellow zoomable" style="top: 80px; left: -360px; --rot: -4deg; width: 220px;">
+    <div style="font-weight: 700; font-size: 1rem; margin-bottom: 6px;">⚡ Core Web Vitals</div>
+    <p style="font-size: 0.85rem; line-height: 1.4; color: #333;">Lighthouse: 98+<br>FCP &lt; 0.8s<br>CLS &lt; 0.01</p>
+  </div>
+
+  <!-- Decorative Frontend Architecture Diagram -->
+  <div class="decor-card sticky white zoomable"
+       style="top: 250px; right: -410px; --rot: 5deg; width: auto; height: auto;">
+    <div style="text-align: left;">
+      <p style="margin-bottom: 8px; font-size: 0.75rem; color: #666; text-transform: uppercase;">UI & State Architecture</p>
+      <svg width="270" height="70" viewBox="0 0 540 120" fill="none" stroke="#333" stroke-width="1.5"
+           style="font-family: sans-serif;">
+        <!-- User Action -->
+        <circle cx="20" cy="50" r="10" fill="#fff"/>
+        <path d="M 30 50 L 55 50" marker-end="url(#arrowhead)"/>
+
+        <!-- Component Event -->
+        <rect x="60" y="35" width="60" height="30" rx="4" fill="#e2e8f0" stroke="#64748b"/>
+        <text x="90" y="54" font-size="12" fill="#333" stroke="none" text-anchor="middle">UI Event</text>
+        <path d="M 120 50 L 145 50" marker-end="url(#arrowhead)"/>
+
+        <!-- Gateway 1: Cached? -->
+        <polygon points="160,35 175,50 160,65 145,50" fill="#fef08a" stroke="#ca8a04"/>
+        <text x="160" y="54" font-size="14" fill="#ca8a04" stroke="none" text-anchor="middle">?</text>
+
+        <!-- Pathway: Cache Hit -->
+        <path d="M 160 35 L 160 15 L 350 15 L 350 35" marker-end="url(#arrowhead)"/>
+        <text x="250" y="10" font-size="10" fill="#16a34a" stroke="none">Cache Hit</text>
+
+        <!-- Pathway: Fetch API -->
+        <path d="M 175 50 L 205 50" marker-end="url(#arrowhead)"/>
+        <text x="190" y="45" font-size="10" fill="#666" stroke="none">Miss</text>
+
+        <!-- Task: TanStack Query -->
+        <rect x="210" y="35" width="75" height="30" rx="4" fill="#bfdbfe" stroke="#3b82f6"/>
+        <text x="247" y="54" font-size="12" fill="#333" stroke="none" text-anchor="middle">Fetch API</text>
+        <path d="M 285 50 L 310 50" marker-end="url(#arrowhead)"/>
+
+        <!-- Task: Zustand / Store -->
+        <rect x="315" y="35" width="75" height="30" rx="4" fill="#bbf7d0" stroke="#22c55e"/>
+        <text x="352" y="54" font-size="12" fill="#333" stroke="none" text-anchor="middle">State Store</text>
+        <path d="M 390 50 L 415 50" marker-end="url(#arrowhead)"/>
+
+        <!-- Task: Virtual DOM / Render -->
+        <rect x="420" y="35" width="70" height="30" rx="4" fill="#e2e8f0" stroke="#64748b"/>
+        <text x="455" y="54" font-size="12" fill="#333" stroke="none" text-anchor="middle">Fast Re-render</text>
+        <path d="M 490 50 L 515 50" marker-end="url(#arrowhead)"/>
+
+        <!-- End -->
+        <circle cx="525" cy="50" r="8" fill="#fff" stroke-width="3"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ================= EN ================= -->
+  <div class="lang en active">
+    <h3>Professional Experience</h3>
+
+    <!-- Sirena AI -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="../sirena.png" alt="Sirena AI">
+        </div>
+        <div class="job-title">
+          <h4>Frontend Developer</h4>
+          <p class="company">Sirena AI · Nov 2025 – Present (11 months)</p>
+        </div>
+      </div>
+      <ul>
+        <li>
+          Co-developed analytical SPA dashboard interfaces and management pages for an AI platform using Angular 18+ and TypeScript.
+        </li>
+        <li>
+          Designed and implemented a unified dynamic table rendering engine, enabling high-performance client-side visualization and smooth Excel report export.
+          <div class="decor-card sticky pink" style="top: -10px; right: -180px; --rot: 4deg;">
+            <p>Fast Tables &amp;<br/>Excel Export</p>
+            <svg class="decor-arrow" style="right: 100%; top: 50%; width: 60px; height: 40px;" viewBox="0 0 60 40">
+              <path d="M 60 20 Q 30 20 0 10" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
+        </li>
+        <li>
+          Optimized initial page load times, rendering pipelines, and browser RAM consumption when handling large tabular datasets.
+        </li>
+        <li>
+          Collaborated closely with designers: refined Figma mockups and revised UX/UI specifications whenever layouts required adjustments.
+        </li>
+        <li>
+          Integrated frontend interfaces with internal REST APIs and microservices.
+        </li>
+      </ul>
+      <div style="margin-top: 8px; margin-bottom: 6px;">
+        <span class="note" style="margin-top: 0;">Stack: Angular 18+, TypeScript, RxJS, HTML5, CSS3, REST API</span>
+      </div>
+      <span class="note">Contractor</span>
+    </div>
+
+    <!-- HappyHero -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="../hh.png" alt="HappyHero">
+        </div>
+        <div class="job-title">
+          <h4>Frontend Developer</h4>
+          <p class="company">HappyHero, USA · Jul 2024 – Jun 2025 (1 year)</p>
+        </div>
+      </div>
+      <ul>
+        <li>
+          Built an interactive Telegram Web App (TWA) from scratch using Next.js (App Router) and TypeScript for psychological assessment tests.
+        </li>
+        <li>
+          Integrated in-app payment checkout workflows directly within the Telegram Web App with instant feedback.
+        </li>
+        <li>
+          Implemented fully responsive, touch-friendly layouts based on Figma designs, adapted across mobile screen viewports and Telegram Webview.
+          <div class="decor-card sticky orange" style="top: -10px; right: -180px; --rot: 8deg;">
+            <p>Telegram WebApp<br/>Built &amp; Launched</p>
+            <svg class="decor-arrow" style="right: 100%; bottom: 30%; width: 60px; height: 50px;" viewBox="0 0 60 50">
+              <path d="M 60 40 Q 30 40 0 20" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
+        </li>
+        <li>
+          Optimized page load speed, asset caching, and RAM consumption inside WebView to ensure smooth 60fps interaction.
+          <div class="decor-card sticky yellow" style="top: -20px; left: -180px; --rot: -6deg;">
+            <p>Bundle &amp; RAM<br/>Optimized</p>
+            <svg class="decor-arrow" style="left: 100%; top: 50%; width: 70px; height: 40px;" viewBox="0 0 70 40">
+              <path d="M 0 20 Q 35 20 65 10" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
+        </li>
+        <li>
+          Built a reusable library of typed UI components adhering to modern accessibility and UX practices.
+        </li>
+      </ul>
+      <div style="margin-top: 8px; margin-bottom: 6px;">
+        <span class="note" style="margin-top: 0;">Stack: Next.js, React, TypeScript, Telegram Web Apps (TWA), HTML5, CSS3</span>
+      </div>
+      <span class="note">Part of work at First Line Outsourcing</span>
+    </div>
+
+    <!-- First Line Outsourcing -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="../flo.png" alt="First Line Outsourcing">
+        </div>
+        <div class="job-title">
+          <h4>Frontend Developer</h4>
+          <p class="company">First Line Outsourcing, Krasnodar · Apr 2024 – Jun 2025 (1 year 3 months)</p>
+        </div>
+      </div>
+      <ul>
+        <li>Developed client-side web applications and Telegram Web Apps (TWA) using Next.js (App Router) and React for multiple client companies.</li>
+        <li>Implemented Backend-for-Frontend (BFF) architecture to streamline data exchange and reduce frontend complexity.</li>
+        <li>Built high-performance dynamic interfaces with infinite scroll feeds, list virtualization, and smooth pagination.</li>
+        <li>Created responsive, cross-device layouts from Figma specifications for mobile, tablet, and desktop viewports.</li>
+        <li>Integrated frontend interfaces with various REST APIs (including custom in-house services), managing caching and error states.</li>
+        <li>Collaborated with designers to refine layout specifications when UX/UI design required ergonomic improvements.</li>
+        <li>Optimized page load times and browser memory footprint.</li>
+      </ul>
+      <div style="margin-top: 8px; margin-bottom: 6px;">
+        <span class="note" style="margin-top: 0;">Stack: Next.js, React, TypeScript, JavaScript, HTML5, CSS3, REST API</span>
+      </div>
+      <span class="note">Employment contract 7 mos. | Self-employed</span>
+    </div>
+
+    <!-- Pet Projects -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="../kaban.png" alt="Kaban">
+        </div>
+        <div class="job-title">
+          <h4>Pet Projects</h4>
+          <p class="company">Diploma Project · Collaborative Task &amp; Team Management Platform (Kanban)</p>
+        </div>
+      </div>
+      <p style="font-weight: 600; margin-bottom: 8px;">Backend:</p>
+      <ul>
+        <li>Developed high-concurrency real-time data synchronization service in Golang using WebSockets, goroutines, and channels.</li>
+        <li>Implemented core business logic, user management, and authentication module on NestJS (Node.js/TypeScript).</li>
+        <li>Configured high-performance inter-service communication between NestJS and Golang microservices via gRPC.</li>
+      </ul>
+      <div style="margin-top: 8px; margin-bottom: 14px;">
+        <span class="note" style="margin-top: 0;">Stack: Golang, NestJS, gRPC, WebSockets, PostgreSQL, Docker</span>
+      </div>
+
+      <p style="font-weight: 600; margin-bottom: 8px;">Frontend:</p>
+      <ul>
+        <li>Developed interactive Single Page Application (SPA) on Angular with centralized state management using Redux.</li>
+        <li>Implemented real-time bidirectional synchronization of task boards and user actions over WebSockets.</li>
+        <li>Built dynamic Kanban board interface with drag-and-drop task workflow, isolated workspaces, and theme switching.</li>
+      </ul>
+      <div style="margin-top: 8px;">
+        <span class="note" style="margin-top: 0;">Stack: Angular, Redux, TypeScript, WebSockets, HTML5, SCSS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= RU ================= -->
+  <div class="lang ru">
+    <h3>Профессиональный опыт</h3>
+
+    <!-- Сирена АИ -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="../sirena.png" alt="Сирена АИ">
+        </div>
+        <div class="job-title">
+          <h4>Frontend-разработчик</h4>
+          <p class="company">Сирена АИ · Ноя 2025 – н.в. (11 месяцев)</p>
+        </div>
+      </div>
+      <ul>
+        <li>
+          Участвовал в разработке дэшборда аналитической AI-платформы и ключевых страниц продукта на Angular 18+ и TypeScript.
+        </li>
+        <li>
+          Спроектировал и реализовал единую систему рендеринга таблиц для удобного отображения данных и быстрого экспорта в Excel.
+          <div class="decor-card sticky pink" style="top: -10px; right: -180px; --rot: 4deg;">
+            <p>Быстрые таблицы<br/>Экспорт в Excel</p>
+            <svg class="decor-arrow" style="right: 100%; top: 50%; width: 60px; height: 40px;" viewBox="0 0 60 40">
+              <path d="M 60 20 Q 30 20 0 10" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
+        </li>
+        <li>
+          Оптимизировал скорость прогрузки страниц и минимизировал потребление оперативной памяти (RAM) при работе с большими объемами данных.
+        </li>
+        <li>
+          Тесно взаимодействовал с дизайнером: дорабатывал и уточнял требования по макетам Figma в случаях, когда исходный результат требовал визуальной или логической оптимизации.
+        </li>
+        <li>
+          Обеспечил бесшовную интеграцию с REST API и микросервисами платформы.
+        </li>
+      </ul>
+      <div style="margin-top: 8px; margin-bottom: 6px;">
+        <span class="note" style="margin-top: 0;">Стек: Angular 18+, TypeScript, RxJS, HTML5, CSS3, REST API</span>
+      </div>
+      <span class="note">Контрактор</span>
+    </div>
+
+    <!-- HappyHero -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="../hh.png" alt="HappyHero">
+        </div>
+        <div class="job-title">
+          <h4>Frontend-разработчик</h4>
+          <p class="company">HappyHero · Июл 2024 – Июн 2025 (1 год)</p>
+        </div>
+      </div>
+      <ul>
+        <li>
+          Разработал с нуля Telegram Web App (TWA) на Next.js (с роутингом по папкам / App Router) и TypeScript для интерактивного прохождения психологических тестов.
+        </li>
+        <li>
+          Реализовал интеграцию онлайн-оплаты и платёжных шлюзов непосредственно внутри TWA.
+        </li>
+        <li>
+          Выполнил адаптивную вёрстку с макетов Figma под различные мобильные экраны и webview Telegram.
+          <div class="decor-card sticky orange" style="top: -10px; right: -180px; --rot: 8deg;">
+            <p>Telegram WebApp<br/>Создан и запущен</p>
+            <svg class="decor-arrow" style="right: 100%; bottom: 30%; width: 60px; height: 50px;" viewBox="0 0 60 50">
+              <path d="M 60 40 Q 30 40 0 20" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
+        </li>
+        <li>
+          Оптимизировал бандл приложения, скорость первой отрисовки и потребление оперативной памяти для плавного отклика (60fps) внутри Telegram.
+          <div class="decor-card sticky yellow" style="top: -20px; left: -180px; --rot: -6deg;">
+            <p>Оптимизация<br/>ОЗУ и загрузки</p>
+            <svg class="decor-arrow" style="left: 100%; top: 50%; width: 70px; height: 40px;" viewBox="0 0 70 40">
+              <path d="M 0 20 Q 35 20 65 10" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
+        </li>
+        <li>
+          Создал библиотеку переиспользуемых типизированных UI-компонентов.
+        </li>
+      </ul>
+      <div style="margin-top: 8px; margin-bottom: 6px;">
+        <span class="note" style="margin-top: 0;">Стек: Next.js, React, TypeScript, Telegram Web Apps (TWA), HTML5, CSS3</span>
+      </div>
+      <span class="note">Относится к работе в компании First Line Outsourcing</span>
+    </div>
+
+    <!-- First Line Outsourcing -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="../flo.png" alt="First Line Outsourcing">
+        </div>
+        <div class="job-title">
+          <h4>Frontend-разработчик</h4>
+          <p class="company">First Line Outsourcing, Краснодар · Апр 2024 – Июн 2025 (1 год 3 месяца)</p>
+        </div>
+      </div>
+      <ul>
+        <li>Разрабатывал клиентские веб-приложения и Telegram Web Apps (TWA) на Next.js (App Router) и React для множества компаний-клиентов.</li>
+        <li>Проектировал и реализовывал архитектуру BFF (Backend for Frontend), ускоряя доставку данных на клиент и упрощая логику интерфейса.</li>
+        <li>Реализовал высоконагруженные интерфейсы с бесконечной лентой (infinite scroll), виртуализацией DOM и плавной пагинацией.</li>
+        <li>Осуществлял верстку по макетам Figma с тщательной адаптацией под любые экраны и устройства.</li>
+        <li>Интегрировал фронтенд с различными внешними и собственными REST API (включая разработанные мной же), настраивал кэширование и валидацию данных.</li>
+        <li>Взаимодействовал с дизайнером: уточнял и дорабатывал требования к макетам при выявлении узких мест в UX/UI.</li>
+        <li>Проводил оптимизацию прогрузки страниц и потребления ОЗУ.</li>
+      </ul>
+      <div style="margin-top: 8px; margin-bottom: 6px;">
+        <span class="note" style="margin-top: 0;">Стек: Next.js, React, TypeScript, JavaScript, HTML5, CSS3, REST API</span>
+      </div>
+      <span class="note">ТК РФ 7 мес. | Работа по самозанятости</span>
+    </div>
+
+    <!-- Пет-проекты -->
+    <div class="job">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="../kaban.png" alt="Kaban">
+        </div>
+        <div class="job-title">
+          <h4>Пет-проекты</h4>
+          <p class="company">Дипломный проект — Платформа для менеджмента задач и проектных команд (Kanban)</p>
+        </div>
+      </div>
+      <p style="font-weight: 600; margin-bottom: 8px;">Backend:</p>
+      <ul>
+        <li>Разработал высокопроизводительный Go-сервис синхронизации данных в реальном времени через WebSockets с использованием горутин и каналов.</li>
+        <li>Разработал сервисы бизнес-логики, управления пользователями и модуль авторизации на NestJS (Node.js/TypeScript).</li>
+        <li>Организовал межсервисное взаимодействие между микросервисами на NestJS и Golang через gRPC.</li>
+      </ul>
+      <div style="margin-top: 8px; margin-bottom: 14px;">
+        <span class="note" style="margin-top: 0;">Стек: Golang, NestJS, gRPC, WebSockets, PostgreSQL, Docker</span>
+      </div>
+
+      <p style="font-weight: 600; margin-bottom: 8px;">Frontend:</p>
+      <ul>
+        <li>Разработал клиентское SPA-приложение на Angular с предсказуемым управлением состоянием на Redux.</li>
+        <li>Реализовал двустороннюю синхронизацию досок задач и действий пользователей в реальном времени по WebSockets.</li>
+        <li>Создал интерактивную Kanban-доску с drag-and-drop перемещением карточек, изоляцией рабочих пространств и сменой тем оформления.</li>
+      </ul>
+      <div style="margin-top: 8px;">
+        <span class="note" style="margin-top: 0;">Стек: Angular, Redux, TypeScript, WebSockets, HTML5, SCSS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section container">
+  <!-- EN -->
+  <div class="lang en active">
+    <h3>Education</h3>
+    <div class="job">
+      <div class="job-header" style="margin-bottom: 12px;">
+        <div class="company-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+               style="width: 28px; height: 28px; color: var(--text);">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div class="job-title">
+          <h4>Kuban State University, Krasnodar</h4>
+          <p class="company">Applied Mathematics and Informatics (Expected 2026)</p>
+        </div>
+      </div>
+      <p style="margin-bottom: 0;">Faculty of Computer Technologies and Applied Mathematics</p>
+    </div>
+  </div>
+
+  <!-- RU -->
+  <div class="lang ru">
+    <h3>Образование</h3>
+    <div class="job">
+      <div class="job-header" style="margin-bottom: 12px;">
+        <div class="company-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+               style="width: 28px; height: 28px; color: var(--text);">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div class="job-title">
+          <h4>Кубанский государственный университет (КубГУ)</h4>
+          <p class="company">Прикладная математика и информатика (Выпуск 2026)</p>
+        </div>
+      </div>
+      <p style="margin-bottom: 0;">Факультет компьютерных технологий и прикладной математики</p>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section class="section container">
+  <!-- EN -->
+  <div class="lang en active">
+    <h3>Languages</h3>
+    <ul class="languages">
+      <li>Russian - Native</li>
+      <li>English - B2 (Upper-Intermediate)</li>
+    </ul>
+  </div>
+
+  <!-- RU -->
+  <div class="lang ru">
+    <h3>Знание языков</h3>
+    <ul class="languages">
+      <li>Русский - Родной</li>
+      <li>Английский - B2 (Средне-продвинутый)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section container skills-section">
+  <!-- EN -->
+  <div class="lang en active">
+    <h3>Skills</h3>
+    <div class="skills-group">
+      <h4>Core & Languages</h4>
+      <div class="skills">
+        <span>TypeScript</span><span>JavaScript (ES6+)</span><span>HTML5</span><span>CSS3</span><span>SCSS</span><span>SQL</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h4>Frameworks & Libraries</h4>
+      <div class="skills">
+        <span>Next.js (App Router)</span><span>React</span><span>Angular 18+</span><span>Vite</span><span>Webpack</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h4>State Management & Data</h4>
+      <div class="skills">
+        <span>TanStack Query</span><span>Zustand</span><span>Redux Toolkit</span><span>RTK Query</span><span>Axios</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h4>Styling & UI Systems</h4>
+      <div class="skills">
+        <span>Tailwind CSS</span><span>CSS Modules</span><span>Styled Components</span><span>Shadcn UI</span><span>MUI</span><span>Framer Motion</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h4>Testing & Quality</h4>
+      <div class="skills">
+        <span>Jest</span><span>React Testing Library</span><span>Playwright</span><span>ESLint</span><span>Prettier</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h4>Tools & Workflow</h4>
+      <div class="skills">
+        <span>Git & GitHub</span><span>Figma</span><span>Docker</span><span>WebSockets</span><span>REST API</span><span>Postman</span><span>CI/CD</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RU -->
+  <div class="lang ru">
+    <h3>Навыки</h3>
+    <div class="skills-group">
+      <h4>Базовые технологии и языки</h4>
+      <div class="skills">
+        <span>TypeScript</span><span>JavaScript (ES6+)</span><span>HTML5</span><span>CSS3</span><span>SCSS</span><span>SQL</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h4>Фреймворки и библиотеки</h4>
+      <div class="skills">
+        <span>Next.js (App Router)</span><span>React</span><span>Angular 18+</span><span>Vite</span><span>Webpack</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h4>Управление состоянием и запросы</h4>
+      <div class="skills">
+        <span>TanStack Query</span><span>Zustand</span><span>Redux Toolkit</span><span>RTK Query</span><span>Axios</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h4>Верстка и UI-библиотеки</h4>
+      <div class="skills">
+        <span>Tailwind CSS</span><span>CSS Modules</span><span>Styled Components</span><span>Shadcn UI</span><span>MUI</span><span>Framer Motion</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h4>Тестирование и качество</h4>
+      <div class="skills">
+        <span>Jest</span><span>React Testing Library</span><span>Playwright</span><span>ESLint</span><span>Prettier</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h4>Инструменты и рабочее окружение</h4>
+      <div class="skills">
+        <span>Git & GitHub</span><span>Figma</span><span>Docker</span><span>WebSockets</span><span>REST API</span><span>Postman</span><span>CI/CD</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="footer-wrapper" style="position: relative; margin-top: 60px;">
+  <!-- Easter Egg Icons -->
+  <div class="easter-eggs-row">
+    <div class="easter-egg-icon" onclick="openIconModal('react')">
+      <img src="../imgs/nodejs.png" alt="React">
+    </div>
+    <div class="easter-egg-icon" onclick="openIconModal('typescript')">
+      <img src="../imgs/golang.png" alt="TypeScript">
+    </div>
+    <div class="easter-egg-icon" onclick="openIconModal('python')">
+      <img src="../imgs/python.png" alt="Python">
+    </div>
+    <div class="easter-egg-icon" onclick="openIconModal('cpp')">
+      <img src="../imgs/cpp.png" alt="C++">
+    </div>
+  </div>
+
+  <footer class="footer" style="position: relative; z-index: 2; background-color: var(--bg); margin-top: 0;">
+    <div class="container">
+      <p class="lang en active">Resume updated in 2026</p>
+      <p class="lang ru">Резюме обновлено в 2026 г.</p>
+    </div>
+  </footer>
+</div>
+
+<!-- Dynamic Quote Modal -->
+<div class="gopher-modal" id="iconModal" onclick="closeIconModal(event)">
+  <div class="gopher-modal-content" onclick="event.stopPropagation()">
+    <button class="gopher-modal-close" onclick="closeIconModal(event)">&times;</button>
+    <img src="" alt="Icon" class="gopher-modal-img" id="modalIconImg">
+    <div class="gopher-quote-wrapper">
+      <blockquote class="gopher-quote">
+        <span class="quote-mark left">«</span>
+        <span id="modalQuoteText"></span>
+        <span class="quote-mark right">»</span>
+      </blockquote>
+      <div class="quote-author">— От меня</div>
+    </div>
+  </div>
+</div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
